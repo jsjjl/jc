@@ -1,12 +1,14 @@
 {
   "pages":[
+    "pages/qylist/qylist",
+    "pages/search/search",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "建材点评",
+    "navigationBarTitleText": "jc",
     "navigationBarTextStyle":"black"
   }
 }

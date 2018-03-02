@@ -1,13 +1,222 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="index">
+  <view class="header">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <image class="weui-icon-search_in-box i_search" mode="widthFix" src="../img/i_search.png"></image>
+                    <span  class="weui-search-bar__input">请输入企业名称</span>
+                </view>
+            </view>
+        </view>
+        
+        <image class="i_user" mode="widthFix" src="../img/i_user.png"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+
+  <scroll-view scroll-x="true" class="index_top_box">  
+    <view class="uploadWrap" scroll-x="true">  
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/1.png" mode="widthFix"></image>
+        <span class="index_top_text">管道</span>
+      </view>  
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/2.png" mode="widthFix"></image>
+        <span class="index_top_text">涂料</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/3.png" mode="widthFix"></image>
+        <span class="index_top_text">管道</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/4.png" mode="widthFix"></image>
+        <span class="index_top_text">黏贴剂</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+    </view>  
+  </scroll-view>
+
+  <view class="clear"></view>
+
+  <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image class="qy_icon" src="../img/i_qy.png" mode="widthFix"></image>
+                </view>
+                <view class="weui-cell__bd">热门企业</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">更多</view>
+            </navigator>
   </view>
+
+  <view class="clear"></view>
+
+  <view class="qy">
+
+      <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc">上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+       <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc">上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+       <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc">上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+
+       <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc">上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+
+       <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc">上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+
+       <view class="qy_box">
+        <view class="qy_box_top">
+          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+        </view>
+        <text class="qy_mc ell">上海兴致科技上海兴致科技上海兴致科技</text>
+        <text class="qy_pf">评分：999分</text>
+      </view>
+
+
+  </view>
+
+
+  <view class="weui-cells weui-cells_after-title pl_top">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image class="qy_icon" src="../img/i_pl.png" mode="widthFix"></image>
+                </view>
+                <view class="weui-cell__bd">最新评论</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">更多</view>
+            </navigator>
+  </view>
+
+  
+  <view class="pl">
+
+
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+      
+      
+  </view>
+
+
+
+    <image class="sq" src="../img/i_sbbj.png"  mode="widthFix"/>
+
 </view>
