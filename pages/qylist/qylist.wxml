@@ -1,0 +1,128 @@
+<view class="index">
+  
+<view class="body">
+ <view class="nav bc_white">
+  <view class="nav_top2 {{selected?'red':''}}" bindtap="selected">推荐企业</view>
+  <view class="nav_top {{selected1?'red':''}}" bindtap="selected1">所有企业</view>
+  <image class=" i_search" mode="widthFix" src="../img/i_search.png"></image>
+ </view>
+
+   <scroll-view scroll-x="true" class="index_top_box">  
+    <view class="uploadWrap" scroll-x="true">  
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/1.png" mode="widthFix"></image>
+        <span class="index_top_text">管道</span>
+      </view>  
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/2.png" mode="widthFix"></image>
+        <span class="index_top_text">涂料</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/3.png" mode="widthFix"></image>
+        <span class="index_top_text">管道</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/4.png" mode="widthFix"></image>
+        <span class="index_top_text">黏贴剂</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view>
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+      <view class="index_top">  
+        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
+        <span class="index_top_text">地毯</span>
+      </view> 
+    </view>  
+  </scroll-view>
+
+ <view class="list {{selected?'show':'hidden'}}">
+    <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+ </view>
+ <view class="list {{selected1?'show':'hidden'}}">
+  <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司2<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司2<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+     <view class="list_box">
+        <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司2<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <text class="dz">上海市宝山区环镇北路171号</text>
+        <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
+        </view>
+    </view>
+ </view>
+</view>
+
+</view>

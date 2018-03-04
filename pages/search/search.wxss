@@ -1,0 +1,12 @@
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.button-sp-area{ width: 90%; height: auto; display: block; float: left; margin: 10px 5%;}
+.search_text{ border-radius: 100px; background: #979797; border: 0; font-size: 14px; color: #000000; margin: 5px 10px 0px;}

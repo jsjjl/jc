@@ -1,0 +1,148 @@
+<view class="index">
+  <image class="topbj" mode="widthFix" src="../img/topbj.png"></image>
+  
+  <view class="top">
+  <text class="top_bt">上海中通快递有限责任公司</text>
+  <view class="top_box">
+    <span>999分</span>
+    <p class=""><image class="topbj" mode="widthFix" src="../img/dw.png"></image>鸠江区福强路永昌路路口75号</p>
+    <p class=""><image class="topbj" mode="widthFix" src="../img/sj.png"></image>021-66080860
+    <em>管道</em><em>管道</em><em>管道</em>
+    </p>
+  </view>
+
+  </view>
+
+<view class="nr">
+  <view class="nr_t">玖富集团，实缴注册资本2亿元人民币，全称玖富金科控股集团有限责任公司。公司成立于2006年，致力于通过互联网和大数据风控技术为粉丝用户提供简单高效优质便捷的金融科技与信息服务，为用户创造财富价值… </view>
+
+  <view class="container">
+      <view class="table">
+          <view class="tr">
+              <view class="th">产品名称</view>
+              <view class="th">产品类别</view>
+              <view class="th">产品评分</view>
+          </view>
+          <view class="tr">
+              <view class="td">不锈钢管道</view>
+              <view class="td">管道</view>
+              <view class="td">999</view>
+          </view>
+          <view class="tr">
+              <view class="td">不锈钢管道</view>
+              <view class="td">管道</view>
+              <view class="td">999</view>
+          </view>
+          <view class="tr">
+              <view class="td">不锈钢管道</view>
+              <view class="td">管道</view>
+              <view class="td">999</view>
+          </view>
+      </view>
+      <p class="more">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p>
+  </view>
+
+</view>
+
+
+
+
+
+<view class="weui-cells weui-cells_after-title pl_top">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image class="qy_icon" src="../img/i_pl.png" mode="widthFix"></image>
+        </view>
+        <view class="weui-cell__bd">网友点评</view>
+    </navigator>
+</view>
+
+<view class="pl_x">
+<view class="pl_x1">请选择点评对象：<picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+                <view class="weui-select">{{accounts[accountIndex]}}</view>
+            </picker>
+
+            <picker bindchange="bindAccountChange1" value="{{accountIndex1}}" range="{{accounts1}}" style=" margin-right:0;">
+              <view class="weui-select">{{accounts1[accountIndex1]}}</view>
+          </picker>
+     
+
+   
+
+
+</view>
+<view class="pl_x1">请选择评分：<image class="" src="../img/xs.png"  mode="widthFix"/><image class="" src="../img/xs.png"  mode="widthFix"/><image class="" src="../img/xs.png"  mode="widthFix"/><image class="" src="../img/xs.png"  mode="widthFix"/><image class="" src="../img/x.png"  mode="widthFix"/><em>4分</em></view>
+
+<view class="pl_tt">
+  <textarea class="weui-textarea" placeholder="多行输入" />
+  <button class="weui-btn" type="default" disabled="true" plain="true">提交</button>
+</view>
+
+</view>
+
+<view class="pl">
+
+
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+
+    <view class="pl_box">
+      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+      <view class="pl_r">
+        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司--琪朗红茶</span><em class="pl_pf">评分：4分</em></view>
+        <view class="pl_sj">2018-01-21 12:00</view>
+        <view class="pl_nr">可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...可以的，老铁双击666，飞机来一打...</view>
+        </view>
+    </view>
+      
+      
+  </view>
+
+
+</view>

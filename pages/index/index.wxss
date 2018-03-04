@@ -1,21 +1,57 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.index {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
 }
+.header{width: 100%; height: auto;display: block;float: left;}
+.weui-search-bar{display: block;float: left;}
+.weui-search-bar{ background: #ffffff; border: 0;}
+.weui-search-bar { width:88%; background: #ffffff;}
+.weui-search-bar__form { background: #fafafa; border: 0;border-radius:200rpx;}
+.weui-search-bar__input{ color: #c6c6c6;}
+.weui-search-bar__input{ display: block; margin-top: -1px;}
+.i_user{ width: 8%; height: auto; display: inline; float: right; margin:5px 3.5% 0 0;}
+.i_search{width: 15px; height: 15px; display: inline; float: left; margin:0px 3% 0 0;}
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
 
-.userinfo-nickname {
-  color: #aaa;
-}
+.index_top_box{ width: 100%; height: auto; padding: 30rpx 0px;float: left; background: #ffffff; margin: 15px 0; }
+.uploadWrap{height:164rpx; width:100%; display: flex; display: -webkit-box; flex-direction: column;}  
+.index_top{ width: 120rpx; height: 144rpx;  flex: 1; margin: 0 9.5px;}  
+.index_top_img{ width: 120rpx; height: 50rpx;display: block; float: left;}  
+.index_top_text{ width: 120rpx; height: 40rpx; margin:4rpx 0 0;line-height: 40rpx; color:#7c7c7c; font-size: 13px; text-align: center; display: block; float: left;}  
+.index_top_box .index_top:first-child{ margin-left: 20px;}
 
-.usermotto {
-  margin-top: 200px;
-}
+.qy_icon{width:20px;margin-right:5px;display:block}
+.weui-cells { float: left; width: 100%; height: auto; display: block;background: #ffffff; margin:0 0 15px ;}
+.weui-cell__bd{ font-size: 13px;}
+.weui-cell__ft{ font-size: 12px;color:#9C9C9C;}
+.qy_icon{ width: 18px; height: auto;}
+.weui-cells:before{top:0;border-top:0rpx solid #d9d9d9}
+.weui-cells:after{bottom:0;border-bottom:0rpx solid #d9d9d9}
+
+.qy{width:100%; height: auto; display: block; float: left; padding-left: 15rpx;}
+
+.qy_box{ width: 210rpx; height: auto; display: block; float: left; margin:15rpx 15rpx;background: #ffffff; border-radius: 5px; padding-bottom: 7px; }
+.qy_box_top{width: 210rpx; height: 179rpx; display: block; float: left; position: relative; }
+.qy_k{width: 210rpx; height: 179rpx; display: block; float: left; position: absolute; z-index: 2; top: 0; left: 0; }
+.qy_bj{width: 210rpx; height: 179rpx; display: block; float: left;position: absolute; z-index: 1; top: 0; left: 0; }
+.qy_tb{width: 44rpx; height: 44rpx; display: block; float: left; position: absolute; z-index: 3; bottom: -5px; right: 3px;}
+.qy_mc{ width: 190rpx;padding: 0 10rpx; height: 20px; line-height: 20px; text-align: left; font-size: 12px; color:#353535; display: block; float: left; margin: 5px 0 0;}
+.qy_pf{ width: 190rpx;padding: 0 10rpx;  height: 20px; line-height: 20px; text-align: left; font-size: 12px; color:#FFBA44;display: block; float: left;}
+.pl_top{ margin: 0;}
+
+.pl{width:100%; display: block; float: left;}
+.pl_box{ position: relative; height: auto; display: block; float: left; margin: 3px 0 8px;border-bottom:0rpx solid #d9d9d9}
+.pl_tx {border-radius: 30px; width: 30px; height: 30px; overflow: hidden; display: block; float: left; margin: 10px 10px 0;}
+.pl_xm{ display: block; float: left; width: 70%; font-size: 13px;}
+.pl_pf{ display: block; float: right; width: 25%; color: #aaaaaa; text-align: right; font-size: 12px;}
+.pl_sj{font-size: 12px;color: #aaaaaa;}
+.pl_nr{ width: 100%; height: auto; margin: 0px 0 8px; font-size: 12px; color: #000000; line-height: 20px; display: block; float: left;}
+.pl_r{ width: 80%; height: auto; display: block; float: left;}
+.pl_rt{  width: 100%; height: auto; margin: 8px 0 0;display: block; float: left; height: 20px; line-break: 20px;}
+.pl_sj{width: 100%; height: auto; margin: 0 0 0px;display: block; float: left; height: 20px; line-break: 20px;}
+.pl .pl_box:last-child{ border: 0;}
+
+.sq{ width: 90px; height: 90px; position: fixed; right:20px; bottom: 20px; z-index: 99; }

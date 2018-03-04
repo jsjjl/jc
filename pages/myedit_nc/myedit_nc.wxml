@@ -1,0 +1,23 @@
+<view class="index">
+
+
+           
+
+
+             <view class="wxh" >
+                
+                  <view class="box">
+                    <view class="qt">昵称</view>
+                    <input class=" fr" value="啊哈哈" />
+                </view>
+                
+                
+            </view>
+
+
+
+
+ <button class="weui-btn tc" type="primary">保存</button>
+        
+
+</view>
