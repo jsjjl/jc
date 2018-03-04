@@ -1,0 +1,50 @@
+<view class="index">
+
+
+             <view class="wxh" >
+                
+                  <view class="box">
+                    <view class="qt">企业联系人：</view>
+                    <input class="fr" value="" />
+                  </view>
+
+                  <view class="box">
+                    <view class="qt">联系电话：</view>
+                    <input class="fr" value="" />
+                  </view>
+
+                  <view class="box">
+                    <view class="qt">企业名称：</view>
+                    <input class="fr" value="" />
+                  </view>
+
+                  <view class="box">
+                    <view class="qt">企业简介：</view>
+                    
+                    <textarea class="fr" value="" style="height:100rpx;"/>
+                  </view>
+                
+                
+            </view>
+
+            <view class="footer">
+            <view class="box">
+                    <view class="qt">附件信息：</view>
+                    
+                     <view class="weui-uploader__bd fr">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                
+                               
+                            </view>
+                            <view class="weui-uploader__input-box">
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </view>
+                  </view>
+            <em>注：请保持联系人电话通畅，稍后会有客户联系确认企业及产品信息</em>
+            </view>
+
+ <button class="weui-btn tc" type="primary">提交</button>
+        
+
+</view>
