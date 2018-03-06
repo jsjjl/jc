@@ -23,5 +23,9 @@ Page({
         this.setData({
             inputVal: e.detail.value
         });
+    },
+    postClick:function(event){
+      console.log(event); 
+      wx.navigateTo({url:'../qypost/qypost'}) 
     }
 });

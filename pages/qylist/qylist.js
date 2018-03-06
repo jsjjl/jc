@@ -18,5 +18,15 @@ Page({
       selected:false,
       selected1:true
     })
+  },
+  postClick: function() {
+    wx.navigateTo({
+      url: '../qypost/qypost'
+    })
+  },
+  searchClick: function(){
+    wx.navigateTo({
+      url: '../search/search'
+    })
   }
 })

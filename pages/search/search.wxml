@@ -18,22 +18,22 @@
             <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
         </view>
         <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
-            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <navigator url="../qypost/qypost" class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
                     <view>上海公元建材发展有限公司</view>
                 </view>
             </navigator>
-            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <navigator url="../qypost/qypost" class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
                     <view>上海泽宾建材有限公司</view>
                 </view>
             </navigator>
-            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <navigator url="../qypost/qypost" class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
                     <view>上海众为建材有限公司</view>
                 </view>
             </navigator>
-            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <navigator url="../qypost/qypost" class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
                     <view>上海希培德建筑材料有限公司</view>
                 </view>
@@ -44,15 +44,15 @@
 
     <view class="button-sp-area">
            
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">德玛西亚</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">德玛西亚</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini">德玛西亚</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
+            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
             
     </view>
 </view>

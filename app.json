@@ -1,14 +1,19 @@
 {
   "pages":[
-    "pages/qylist/qylist",
-    "pages/search/search",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/sbqy/sbqy",
+    "pages/myedit_nc/myedit_nc",
+    "pages/myedit/myedit",
+    "pages/sq/sq",
+    "pages/cppost/cppost",
+    "pages/qypost/qypost",
+    "pages/qylist/qylist",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "jc",
+    "navigationBarTitleText": "建材点评",
     "navigationBarTextStyle":"black"
   }
 }

@@ -1,0 +1,40 @@
+<view class="index">
+
+
+           
+
+
+             <view class="wxh">
+                
+                   微信号<em>
+                    7834295wlx
+                </em>
+                
+                
+            </view>
+
+
+            <view class="nc">
+
+                <view class="box" bindtap="ncClick">
+                    <view class="qt">昵称</view>
+                    <span class=" weui-select fr">啊哈哈</span>
+                </view>
+               
+           
+                <view class="box">
+                    <view class="qt">性别</view>
+
+                     <picker class="fr fr2" bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+                        <view class="">{{accounts[accountIndex]}}</view>
+                    </picker>
+
+                </view>
+              
+ </view>
+
+
+ <button class="weui-btn tc" type="primary" bindtap="tcClick">退出登录</button>
+        
+
+</view>

@@ -1,0 +1,19 @@
+.index {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.wxh{ width: 90%; height: 40px;  display: block; float: right; padding: 0 5%; line-height: 40px; background: #ffffff; float: left; margin: 15px 0; font-size: 14px; color: #000000;}
+.wxh em{ font-size: 13px; display: block; float: right; }
+.myedit_list_right{float:right; text-align:right; width:auto; height:auto; display:block;color:#919191;}
+.nc{width: 100%; height: auto;  display: block; float: right; line-height: auto; background: #ffffff; float: left; margin:0 0 0 0; font-size: 14px; color: #000000;}
+
+.box{width:90%; padding: 12px 5%; height: 15px; line-height: 15px;  display: block; float: left; border-bottom: 1px solid #f9f9f9; font-size: 13px;}
+.qt{ width: auto; display: block; float: left;font-size: 13px;}
+.fr{ display: block; float: right; text-align: right; margin-top: -5px; border: 0; font-size: 13px;}
+.fr2{ margin-right: 10px;}
+
+.tc{  width: 80%; margin: 20px 10% 0; display: block; float: left; font-size: 16px;}

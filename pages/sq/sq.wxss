@@ -1,0 +1,24 @@
+/**index.wxss**/
+.userinfo {
+   display: block; float: left;width: 90%; padding: 0 5%; 
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.topbj{ width: 100%; height: auto;display: block;float: left; margin-bottom: 15px;}
+.ts{ width: 90%; padding: 0 5%; height: 15px; line-height: 15px; font-size: 13px; color: #000000; margin-bottom: 15px; display: block; float: left;}
+.ts image{ width: 10px; height: auto; display: block; float: left; margin: 2.5px 5px 0 0;}
+.bt1{ width: 46%; float: left; margin: 0 2%;}

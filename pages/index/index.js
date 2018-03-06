@@ -33,6 +33,26 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  searchClick:function(event){
+    console.log(event); 
+    wx.navigateTo({url:'../search/search'}) 
+  },
+  userClick:function(event){
+    console.log(event); 
+    wx.navigateTo({url:'../sq/sq'}) 
+  },
+  tagClick:function(event){
+    console.log(event); 
+    wx.navigateTo({url:'../qylist/qylist'}) 
+  },
+  postClick:function(event){
+    console.log(event); 
+    wx.navigateTo({url:'../qypost/qypost'}) 
+  },
+  sbClick:function(event){
+    console.log(event); 
+    wx.navigateTo({url:'../sbqy/sbqy'}) 
   }
   
 })

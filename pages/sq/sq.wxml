@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="index">
+<image class="topbj" mode="widthFix" src="../img/sq.png"></image>
+<p class="ts"><image  mode="widthFix" src="../img/q.png"></image>
+我们需要您的授权，以关联您的建信账号</p>
+
+  <view class="userinfo">
+   <block wx:if="{{!hasUserInfo && canIUse}}">
+
+        <button class="weui-btn bt1" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">接受</button>
+        <button class="weui-btn bt1" type="default" plain="true">拒绝</button>
+    </block>
+   
+    <block wx:else>
+        <button class="weui-btn " type="primary" bindtap="loginClick" >微信用户快捷登录</button>
+
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+ 
+</view>
