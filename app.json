@@ -13,7 +13,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "建材点评",
+    "navigationBarTitleText": "建材评价",
     "navigationBarTextStyle":"black"
   }
 }

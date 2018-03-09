@@ -78,6 +78,6 @@ color: #444444;
 .pl_x1 em{ font-size: 16px; color: #FFBA44;}
 
 .pl_tt{width: 100%; height: auto; background: #ffffff; display: block; float: left; margin-bottom: 15px;}
-.pl_tt textarea{width: 55%;  background: #ffffff; border-radius: 5px; border: 1px solid #D2D2D2; display: block; float: left; margin-left: 5%; height: 15px; margin-top: 5px; font-size: 13px; line-height: 15px; padding: 12.5px 2%; display: block;}
+.pl_tt textarea{width: 55%;  background: #ffffff; border-radius: 5px; border: 1px solid #D2D2D2; display: block; float: left; margin-left: 5%; height: 15px; margin-top: 5px; font-size: 13px; line-height: 15px; height:50px; padding: 12.5px 2%; display: block;}
 .pl_tt button{width: 30%; height: auto; display: block; height: 42px; line-height: 42px; margin-top: 5px; float: right; margin-right: 4%; border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
 button[type="default"][plain][disabled]  {border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}

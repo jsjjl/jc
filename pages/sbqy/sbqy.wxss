@@ -18,7 +18,7 @@
 .footer{width: 90%; height: auto;  display: block; float: right; padding: 0 5%; line-height: auto; background: #ffffff; float: left; margin:0 0 0 0; font-size: 14px; color: #000000;}
 .footer .box{ border: 0;}
 .footer em{ width: 100%; line-height: 20px; font-size: 13px; margin: 10px 0 50px; color: #D32424; display: block; float: left;}
-.tc{  width: 80%; margin: 20px 0% 0; display: block; float: left; font-size: 16px; position: fixed; bottom:0; left:0; width:100%;}
+.tc{  width: 80%; margin: 20px 0% 0; display: block; float: left; font-size: 16px; position: fixed; bottom:0; left:0; width:100%; border-radius: 0;}
 .weui-uploader__input-box {
  width: 70px; height: 70px; border: 1px solid #F3F3F3;}
 .footer .fr{ border: 0;}

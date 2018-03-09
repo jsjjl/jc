@@ -1,33 +1,57 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+const loginByWX = require('../../config').loginByWX;
+
+var authorization;
+
 
 Page({
   data: {
-    hotList: [
-      {
-        pic: '../img/1.png',
-        title: '玻璃棧道',
-        desc: '22W人去過'
-      }, {
-        pic: '../img/1.png',
-        title: '玻璃棧道',
-        desc: '22W人去過'
-      }, {
-        pic: '../img/1.png',
-        title: '玻璃棧道',
-        desc: '22W人去過'
-      }, {
-        pic: '../img/1.png',
-        title: '玻璃棧道',
-        desc: '22W人去過'
-      }, {
-        pic: '../img/1.png',
-        title: '玻璃棧道',
-        desc: '22W人去過'
-      }
-    ]
   },
+  onLoad: function (options) {
+    var that = this;
+
+    //url获取参数
+    // authorization = options.wx_id;
+    // console.log("接收到的参数是wx_id:", authorization); 
+
+    //ajax接口请求
+    // wx.request({
+    //     url: findPassClientList,
+        
+    //     data: {
+    //         authorization: authorization
+    //     },
+        
+    //     success:function(res){ 
+
+    //         if(res.data.state == 200){
+
+    //             console.log(res.data.data);
+
+    //         }else{
+
+    //           wx.showToast({
+    //             icon: 'loading',
+    //             title: res.data.msg,
+    //           })
+            
+    //        }
+          
+
+    //     },
+    //       fail:function(res){
+
+    //         wx.showToast({
+    //           icon: 'loading',
+    //           title: res.data.msg,
+    //         })
+
+    //     }
+    //   });
+
+},
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -47,7 +71,14 @@ Page({
     wx.navigateTo({url:'../qylist/qylist'}) 
   },
   postClick:function(event){
-    console.log(event); 
+    console.log(event);
+    
+    // var $data = e.currentTarget.dataset;
+    // console.log($data.id);
+    // wx.navigateTo({
+    //   url: '../qypost/qypost?taskId='+ $data.id //传参跳转即可
+    // })
+
     wx.navigateTo({url:'../qypost/qypost'}) 
   },
   sbClick:function(event){

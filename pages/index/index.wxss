@@ -5,7 +5,7 @@
   overflow: hidden;
   background: #f9f9f9;
 }
-.header{width: 100%; height: auto;display: block;float: left;}
+.header{width: 100%; height: auto;display: block;float: left; background: #ffffff;}
 .weui-search-bar{display: block;float: left;}
 .weui-search-bar{ background: #ffffff; border: 0;}
 .weui-search-bar { width:88%; background: #ffffff;}

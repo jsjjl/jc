@@ -14,48 +14,57 @@
 
 
   <scroll-view scroll-x="true" class="index_top_box">  
-    <view class="uploadWrap" scroll-x="true">  
-      <view class="index_top" bindtap="tagClick">  
+    <view class="uploadWrap" scroll-x="true">
+
+      
+      <!-- <block wx:for="{{list}}" wx:key="key">
+        <view class="index_top" bindtap="tagClick_box" index="{{index}}" data-id="{{item.id}}" >  
+          <image class="index_top_img" src="{{item.img}}" mode="widthFix"></image>
+          <span class="index_top_text">{{item.Name}}</span>
+        </view>  
+      </block> -->
+
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/1.png" mode="widthFix"></image>
         <span class="index_top_text">管道</span>
       </view>  
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/2.png" mode="widthFix"></image>
         <span class="index_top_text">涂料</span>
       </view>
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/3.png" mode="widthFix"></image>
         <span class="index_top_text">管道</span>
       </view>
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/4.png" mode="widthFix"></image>
         <span class="index_top_text">黏贴剂</span>
       </view>
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view>
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view>
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view> 
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view> 
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view> 
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view> 
-      <view class="index_top" bindtap="tagClick">  
+      <view class="index_top" bindtap="tagClick_box">  
         <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
         <span class="index_top_text">地毯</span>
       </view> 
@@ -65,18 +74,32 @@
   <view class="clear"></view>
 
   <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                     <image class="qy_icon" src="../img/i_qy.png" mode="widthFix"></image>
                 </view>
                 <view class="weui-cell__bd">热门企业</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access" bindtap="tagClick">更多</view>
-            </navigator>
+                <view class="weui-cell__ft weui-cell__ft_in-access" data-id="" bindtap="tagClick">更多</view>
+            </view>
   </view>
 
   <view class="clear"></view>
 
   <view class="qy">
+
+
+      <!-- <block wx:for="{{gs_list}}" wx:key="key">
+        <view class="qy_box" bindtap="postClick" index="{{index}}" data-id="{{item.id}}" >
+          <view class="qy_box_top">
+            <image class="qy_k" src="{{item.img}}" mode="widthFix"></image>
+            <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+            <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+          </view>
+          <text class="qy_mc">{{item.img}}</text>
+          <text class="qy_pf">评分：{{item.img}}分</text>
+        </view>
+      </block> -->
+
 
       <view class="qy_box" bindtap="postClick">
         <view class="qy_box_top">
@@ -120,7 +143,7 @@
         <view class="qy_box_top">
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
           <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
-          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+ 
         </view>
         <text class="qy_mc">上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
@@ -130,7 +153,7 @@
         <view class="qy_box_top">
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
           <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
-          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+
         </view>
         <text class="qy_mc ell">上海兴致科技上海兴致科技上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
@@ -141,18 +164,29 @@
 
 
   <view class="weui-cells weui-cells_after-title pl_top">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                     <image class="qy_icon" src="../img/i_pl.png" mode="widthFix"></image>
                 </view>
                 <view class="weui-cell__bd">最新评论</view>
                 <!-- <view class="weui-cell__ft weui-cell__ft_in-access">更多</view> -->
-            </navigator>
+            </view>
   </view>
 
   
   <view class="pl">
 
+
+      <!-- <block wx:for="{{pl_list}}" wx:key="key">
+          <view class="pl_box"  index="{{index}}" data-id="{{item.id}}" >
+            <image class="pl_tx" src="{{item.img}}"  mode="widthFix"/>
+            <view class="pl_r">
+              <view class="pl_rt"><span class="pl_xm ell">{{item.img}}</span><em class="pl_pf">评分：{{item.img}}分</em></view>
+              <view class="pl_sj">{{item.img}}</view>
+              <view class="pl_nr">{{item.img}}</view>
+              </view>
+          </view>
+      </block> -->
 
     <view class="pl_box">
       <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>

@@ -80,21 +80,21 @@
     </view>
      <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
-        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司</p>
         <text class="dz">上海市宝山区环镇北路171号</text>
         <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
         </view>
     </view>
      <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
-        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司</p>
         <text class="dz">上海市宝山区环镇北路171号</text>
         <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
         </view>
     </view>
      <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
-        <view class="list_box_r"><p>上海酒店企业管理有限公司<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司</p>
         <text class="dz">上海市宝山区环镇北路171号</text>
         <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
         </view>
@@ -103,14 +103,14 @@
  <view class="list {{selected1?'show':'hidden'}}">
   <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
-        <view class="list_box_r"><p>上海酒店企业管理有限公司2<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司2</p>
         <text class="dz">上海市宝山区环镇北路171号</text>
         <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
         </view>
     </view>
      <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
-        <view class="list_box_r"><p>上海酒店企业管理有限公司2<image class="index_top_img" src="../img/v.png" mode="widthFix"></image></p>
+        <view class="list_box_r"><p>上海酒店企业管理有限公司2</p>
         <text class="dz">上海市宝山区环镇北路171号</text>
         <view class="ft"><i>999</i>分   |   <i>3</i>个产品   <em>防水材料</em><em>管道</em></view>
         </view>
