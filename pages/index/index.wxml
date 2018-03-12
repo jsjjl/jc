@@ -24,50 +24,27 @@
         </view>  
       </block> -->
 
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/1.png" mode="widthFix"></image>
+      <view class="index_top" bindtap="tagClick_box1">  
+        <image class="index_top_img" src="{{tagClick_img1}}" mode="widthFix"></image>
         <span class="index_top_text">管道</span>
       </view>  
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/2.png" mode="widthFix"></image>
+      <view class="index_top" bindtap="tagClick_box2">  
+        <image class="index_top_img" src="{{tagClick_img2}}" mode="widthFix"></image>
         <span class="index_top_text">涂料</span>
       </view>
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/3.png" mode="widthFix"></image>
-        <span class="index_top_text">管道</span>
+      <view class="index_top" bindtap="tagClick_box3">  
+        <image class="index_top_img" src="{{tagClick_img3}}" mode="widthFix"></image>
+        <span class="index_top_text">胶粘剂</span>
       </view>
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/4.png" mode="widthFix"></image>
-        <span class="index_top_text">黏贴剂</span>
+      <view class="index_top" bindtap="tagClick_box4">  
+        <image class="index_top_img" src="{{tagClick_img4}}" mode="widthFix"></image>
+        <span class="index_top_text">防水</span>
       </view>
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
+      <view class="index_top" bindtap="tagClick_box5">  
+        <image class="index_top_img" src="{{tagClick_img5}}" mode="widthFix"></image>
+        <span class="index_top_text">地面</span>
       </view>
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view>
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view> 
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view> 
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view> 
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view> 
-      <view class="index_top" bindtap="tagClick_box">  
-        <image class="index_top_img" src="../img/icon/5.png" mode="widthFix"></image>
-        <span class="index_top_text">地毯</span>
-      </view> 
+
     </view>  
   </scroll-view>
 
@@ -88,20 +65,24 @@
   <view class="qy">
 
 
-      <!-- <block wx:for="{{gs_list}}" wx:key="key">
+      <block wx:for="{{gs_list}}" wx:key="key">
         <view class="qy_box" bindtap="postClick" index="{{index}}" data-id="{{item.id}}" >
           <view class="qy_box_top">
-            <image class="qy_k" src="{{item.img}}" mode="widthFix"></image>
-            <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
+            <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
+            <image class="qy_bj" src="{{item.picture}}" mode="widthFix"></image>
+
+            <block wx:if="{{item.isAddV == 1}}">
             <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
+            </block>
+
           </view>
-          <text class="qy_mc">{{item.img}}</text>
-          <text class="qy_pf">评分：{{item.img}}分</text>
+          <text class="qy_mc ell">{{item.companyName}}</text>
+          <text class="qy_pf">评分：{{item.score}}分</text>
         </view>
-      </block> -->
+      </block>
 
 
-      <view class="qy_box" bindtap="postClick">
+      <!-- <view class="qy_box" bindtap="postClick">
         <view class="qy_box_top">
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
           <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
@@ -110,6 +91,8 @@
         <text class="qy_mc">上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
       </view>
+
+
        <view class="qy_box" bindtap="postClick">
         <view class="qy_box_top">
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
@@ -119,6 +102,8 @@
         <text class="qy_mc">上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
       </view>
+
+
        <view class="qy_box" bindtap="postClick">
         <view class="qy_box_top">
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
@@ -157,7 +142,7 @@
         </view>
         <text class="qy_mc ell">上海兴致科技上海兴致科技上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
-      </view>
+      </view> -->
 
 
   </view>

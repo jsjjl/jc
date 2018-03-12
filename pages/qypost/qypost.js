@@ -41,5 +41,9 @@ Page({
     wx.navigateTo({
       url: '../cppost/cppost'
     })
+  },onLoad: function (options) {
+    var that = this;
+    
+    console.log("企业id:",options.qyId)
   }
 })
