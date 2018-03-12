@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp();
 const findCompanyList = require('../../config').findCompanyList;
+const findCommentList = require('../../config').findCommentList;
+
 
 var authorization,
     tag_id = 1;
@@ -19,11 +21,45 @@ Page({
     tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
     tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
     gs_list:[],
+    pl_list:[],
   },
   onLoad: function (options) {
     var that = this;
 
     this.qy_list(1);
+
+    
+    wx.request({
+      url: findCommentList,
+      // tag_id = e,
+      data: {
+        
+      },
+      
+      success:function(res){
+
+        if(res.data.state == 0){
+          console.log("评论:",res.data.data);
+          that.setData({
+            pl_list:res.data.data
+          })
+        }else{
+          wx.showToast({
+            icon: 'loading',
+            title: res.data.msg,
+          });
+        }
+
+      },
+      fail:function(res){
+          wx.showToast({
+              icon: 'loading',
+              title: "服务器忙请稍后",
+            });
+           
+      }
+    });
+
 
     //url获取参数
     // authorization = options.wx_id;
@@ -152,6 +188,7 @@ tagClick_box5: function(){
     console.log(event); 
     wx.navigateTo({url:'../sbqy/sbqy'}) 
   },
+  
 
 //获取首页企业列表
   qy_list: function (e) {

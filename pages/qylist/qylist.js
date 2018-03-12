@@ -24,30 +24,39 @@ Page({
         that.setData({
           tagClick_img1:'https://www.mlito.com/wx/jc/1a.png'
         });
+        this.tjqy_list(1);
+        this.qbqy_list(1);
       }
       else if(options.tagid ==2){
         that.setData({
           tagClick_img2:'https://www.mlito.com/wx/jc/2a.png'
         });
+        this.tjqy_list(2);
+        this.qbqy_list(2);
       }
       else if(options.tagid ==3){
         that.setData({
           tagClick_img3:'https://www.mlito.com/wx/jc/3a.png'
         });
+        this.tjqy_list(3);
+        this.qbqy_list(3);
       }
       else if(options.tagid ==4){
         that.setData({
           tagClick_img4:'https://www.mlito.com/wx/jc/4a.png'
         });
+        this.tjqy_list(4);
+        this.qbqy_list(4);
       }
       else if(options.tagid ==5){
         that.setData({
           tagClick_img5:'https://www.mlito.com/wx/jc/5a.png'
         });
+        this.tjqy_list(5);
+        this.qbqy_list(5);
       };
 
-      this.tjqy_list(1);
-      this.syqy_list(1);
+     
 
   },
 tagClick_box1: function(){
@@ -122,9 +131,11 @@ tagClick_box5: function(){
       selected1:true
     })
   },
-  postClick: function() {
+  postClick: function(e){
+    var $data = e.currentTarget.dataset;
+    console.log($data.id);
     wx.navigateTo({
-      url: '../qypost/qypost'
+      url: '../qypost/qypost?qyId='+ $data.id //传参跳转即可
     })
   },
   searchClick: function(){

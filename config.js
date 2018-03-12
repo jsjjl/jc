@@ -11,8 +11,16 @@ var config = {
   // 下面的地址配合 Server 工作
   host,
 
-  //获取id
+  //获取列表
   findCompanyList: `${host}/findAllCompanyList`,
+  //获取详情
+  findCompanyById: `${host}/findCompanyById`,
+  //根据公司名称模糊搜索
+  findCompanyByName: `${host}/findCompanyByName`,
+  //添加评论
+  insertComment: `${host}/insertComment`,
+  //查询评论
+  findCommentList: `${host}/findCommentList`,
   
   
 
