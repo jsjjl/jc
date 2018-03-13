@@ -26,7 +26,7 @@ var config = {
   //申报企业
   declareCompany: `${host}/declareCompany`,
   //图片上传接口
-  UploadVideo: `${host}/Upload/UploadVideo`,  
+  UploadVideo: "https://jiancai.dcofcity.com/yj_jiancai/Upload/UploadVideo",  
   
   
 

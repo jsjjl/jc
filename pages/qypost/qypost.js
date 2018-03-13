@@ -47,7 +47,6 @@ Page({
       var that = this;
       this.chooseicon_a(5);
 
-      var that = this;
 
       //调用应用实例的方法获取全局数据  
       that.getUserInfo();

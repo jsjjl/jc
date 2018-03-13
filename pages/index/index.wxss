@@ -43,7 +43,7 @@
 .pl_top{ margin: 0;}
 
 .pl{width:100%; display: block; float: left; margin-bottom: 50px;}
-.pl_box{ position: relative; height: auto; display: block; float: left; margin: 3px 0 8px;border-bottom:0rpx solid #d9d9d9}
+.pl_box{ position: relative; height: auto; display: block; float: left; margin: 3px 0 8px;border-bottom:0rpx solid #d9d9d9; width: 100%;}
 .pl_tx {border-radius: 30px; width: 30px; height: 30px; overflow: hidden; display: block; float: left; margin: 10px 10px 0;}
 .pl_xm{ display: block; float: left; width: 70%; font-size: 13px;}
 .pl_pf{ display: block; float: right; width: 25%; color: #aaaaaa; text-align: right; font-size: 12px;}

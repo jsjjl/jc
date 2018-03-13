@@ -34,7 +34,7 @@ Page({
               },
               success: function(res){
                 var data = res.data
-                console.log(res.data)
+                console.log("返回的数据",res)
                  // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                   that.setData({
                     files: that.data.files.concat(res.tempFilePaths)
