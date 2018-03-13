@@ -164,15 +164,14 @@
 
  
 <block wx:for="{{pl_list}}" wx:key="key">
-    <view class="pl_box" index="{{index}}" data-id="{{item.id}}" >
-      <image class="pl_tx" src="../img/i_tx.png"  mode="widthFix"/>
+  <view class="pl_box" index="{{index}}" data-id="{{item.id}}" >
+      <image class="pl_tx" src="{{item.icon}}"  mode="widthFix"/>
       <view class="pl_r">
-        <view class="pl_rt"><span class="pl_xm ell">上海琪朗股份有限公司</span><em class="pl_pf">评分：{{item.score}}分</em></view>
-        <view class="pl_sj">{{item.add_time}}</view>
+        <view class="pl_rt"><span class="pl_xm ell">{{item.companyName}}--{{item.productName}}</span><em class="pl_pf">评分：{{item.score}}分</em></view>
+        <view class="pl_sj">{{item.addTime}}</view>
         <view class="pl_nr">{{item.content}}</view>
         </view>
-    </view>
-
+</view>
  </block>
 
     

@@ -1,6 +1,10 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+
+var  uid,
+icon,
+wxName;
 
 Page({
   data: {
@@ -54,6 +58,11 @@ Page({
   loginClick: function(e){
     wx.navigateTo({
       url:"../myedit/myedit"
+    })
+  },
+  juClick: function(e){
+    wx.navigateTo({
+      url:"../index/index"
     })
   }
 })

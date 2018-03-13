@@ -12,7 +12,7 @@ var config = {
   host,
 
   //获取列表
-  findCompanyList: `${host}/findAllCompanyList`,
+  findCompanyList: `${host}/findCompanyList`,
   //获取详情
   findCompanyById: `${host}/findCompanyById`,
   //根据公司名称模糊搜索
@@ -21,9 +21,14 @@ var config = {
   insertComment: `${host}/insertComment`,
   //查询评论
   findCommentList: `${host}/findCommentList`,
+  //热门搜索6个
+  heatSearch: `${host}/heatSearch`,
+  //申报企业
+  declareCompany: `${host}/declareCompany`,
+  //图片上传接口
+  UploadVideo: `${host}/Upload/UploadVideo`,  
   
   
-
 
 };
   //对外把对象config返回

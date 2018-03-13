@@ -194,6 +194,7 @@ tagClick_box5: function(){
   qy_list: function (e) {
     var that = this;
     console.log(e);
+  
     wx.request({
       url: findCompanyList,
       // tag_id = e,

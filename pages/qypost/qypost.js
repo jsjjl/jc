@@ -4,16 +4,22 @@ const app = getApp();
 const findCompanyById = require('../../config').findCompanyById;
 const findCommentList = require('../../config').findCommentList;
 const insertComment = require('../../config').insertComment;
+var util = require('../../utils/util.js');  
 
 
 var uid,
-tx,
+icon,
+wxName,
 content,
 phone,
 nickName,
 companyId,
-productId,
-score = 5;
+productId = "",
+score = 5,
+addTime;
+
+var datasbt = ["选择产品"];
+var datasbt_id = [""];
 
 Page({
   data:{
@@ -33,10 +39,48 @@ Page({
     dpfs:"0",
     tjxs:true,
     modal_style:"display:none",
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     },
     onLoad: function (options) {
       var that = this;
       this.chooseicon_a(5);
+
+      var that = this;
+
+      //调用应用实例的方法获取全局数据  
+      that.getUserInfo();
+      if (app.globalData.userInfo) {
+        this.setData({
+          userInfo: app.globalData.userInfo,
+          hasUserInfo: true
+        })
+      } else if (this.data.canIUse){
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        app.userInfoReadyCallback = res => {
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      } else {
+        // 在没有 open-type=getUserInfo 版本的兼容处理
+        wx.getUserInfo({
+          success: res => {
+            app.globalData.userInfo = res.userInfo
+            this.setData({
+              userInfo: res.userInfo,
+              hasUserInfo: true
+            })
+          }
+        })
+      }
+
+
+
+
 
 
       wx.request({
@@ -50,8 +94,9 @@ Page({
 
           if(res.data.state == 0){
             console.log("企业:",res.data.company);
+            
 
-            companyId = res.data.company.companyName;
+            companyId = res.data.company.id;
 
             that.setData({
               product_list:res.data.product,
@@ -63,14 +108,16 @@ Page({
               companyProfile:res.data.company.companyProfile,
         
             });
-            var datasbt = [];
+            
             var datas = res.data.product;
            
             for(var i=0; i<datas.length; i++){
                datasbt.push(datas[i].productName);
+               datasbt_id.push(datas[i].id);
             }
-            productId=datasbt[0];
-            console.log(productId);
+
+            // productId=datasbt[0];
+           
            
            //然后 改好时间格式 遍历出来就好
             that.setData({
@@ -113,6 +160,8 @@ Page({
             that.setData({
               pl_list:res.data.data
             })
+
+
           }else{
             wx.showToast({
               icon: 'loading',
@@ -140,7 +189,11 @@ Page({
       })
   },
   bindAccountChange1: function(e) {
-    console.log('picker account 发生选择改变，携带值为', e.detail.value);
+
+    
+    productId = datasbt_id[e.detail.value];
+
+    console.log(productId);
 
     this.setData({
         accountIndex1: e.detail.value
@@ -182,7 +235,9 @@ Page({
       this.setData({
         tjxs:false
       })
-    },//提交评论
+    },
+    
+    //提交评论
     tjpl: function(e) {
     
    this.setData({
@@ -199,9 +254,12 @@ phone= e.detail.value
         nickName= e.detail.value
         
       },
-//提交评论
-tjpl_ok: function(e) {
 
+//最终提交评论
+tjpl_ok: function(e) {
+  var that = this;
+  // var time = util.formatTime(new Date());
+  // console.log(time)  
   wx.request({
     url: insertComment,
     // tag_id = e,
@@ -213,16 +271,64 @@ tjpl_ok: function(e) {
       companyId: companyId,
       productId: productId,
       score: score,
-      uid: uid,
+      icon: icon,
+      wxName: wxName,
+      // addTime:time
     },
     
     success:function(res){
 
       if(res.data.state == 0){
+
+        that.setData({
+          modal_style:"display:none",
+         });
+
         wx.showToast({
           icon: 'success',
           title: res.data.msg,
         });
+
+        
+
+        wx.request({
+          url: findCommentList,
+          // tag_id = e,
+          data: {
+            companyId: companyId,
+          },
+          
+          success:function(res){
+  
+            if(res.data.state == 0){
+              console.log("评论:",res.data.data);
+              that.setData({
+                pl_list:res.data.data
+              })
+  
+              
+            }else{
+              wx.showToast({
+                icon: 'loading',
+                title: res.data.msg,
+              });
+            }
+    
+          },
+          fail:function(res){
+              wx.showToast({
+                  icon: 'loading',
+                  title: "服务器忙请稍后",
+                });
+               
+          }
+        });
+
+
+
+
+        
+
       }else{
         wx.showToast({
           icon: 'loading',
@@ -250,5 +356,37 @@ tjpl_ok: function(e) {
      
       
        },
+
+
+
+
+       //获取用户信息
+  getUserInfo:function(){ 
+    var that = this;  
+
+    wx.login({
+      success: function(res) {
+        if (res.code) {
+            // code = res.code
+            // console.log(code);
+            wx.getUserInfo({  
+               success: function (res) {
+                      wxName = res.userInfo.nickName;
+                      icon = res.userInfo.avatarUrl;
+                       console.log(wxName);
+                      console.log(icon);
+
+
+                 
+
+                    }  
+               });
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+      }
+    });
+
+  },
 
 })

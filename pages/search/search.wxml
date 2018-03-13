@@ -17,7 +17,7 @@
             </view>
             <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
         </view>
-        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+        <!-- <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
             <navigator url="../qypost/qypost" class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
                     <view>上海公元建材发展有限公司</view>
@@ -38,21 +38,50 @@
                     <view>上海希培德建筑材料有限公司</view>
                 </view>
             </navigator>
-        </view>
+        </view> -->
     </view>
 
 
-    <view class="button-sp-area">
+    <view class="button-sp-area {{tag?'show':'hidden'}}">
            
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">合一重工</button>
-            <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">德玛西亚</button>
-            
+        <block wx:for="{{rmqy_list}}" wx:key="key">
+           
+            <button class="weui-btn mini-btn search_text" type="default" size="mini"  bindtap="postClick" index="{{index}}" data-id="{{item.id}}" >{{item.companyName}}</button>
+
+
+            <!-- <button class="weui-btn mini-btn search_text" type="default" size="mini" bindtap="postClick">上海大红袍</button> -->
+        </block>        
     </view>
+
+
+
+     <view class="list  {{list?'show':'hidden'}}">
+
+      <block wx:for="{{qbqy_list}}" wx:key="key">
+
+        <view class="list_box"  bindtap="postClick" index="{{index}}" data-id="{{item.id}}" >
+            <image class="list_boximg" src="{{item.picture}}" mode="widthFix"></image>
+            <view class="list_box_r"><p>{{item.companyName}} <block wx:if="{{item.isAddV == 1}}"><image class="index_top_img" src="../img/v.png" mode="widthFix"></image></block></p>
+            <text class="dz ell">{{item.address}}</text>
+            <view class="ft"><i>{{item.score}}</i>分   |   <i>{{item.total}}</i>个产品   
+            
+
+            <em>{{item.type}}</em>
+
+            <!-- <block wx:for="{{item.fl}}" wx:for-item="fl" wx:key="key2">
+                <em>{{fl.name}}</em>
+            </block> -->
+            
+            </view>
+        </view>
+      
+      </view>
+
+  </block>
+
+
+    
+ </view>
+
+ 
 </view>

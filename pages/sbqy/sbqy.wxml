@@ -5,23 +5,23 @@
                 
                   <view class="box">
                     <view class="qt">企业联系人：</view>
-                    <input class="fr" value="" />
+                    <input class="fr" value="" bindinput="lxr_bt"/>
                   </view>
 
                   <view class="box">
                     <view class="qt">联系电话：</view>
-                    <input class="fr" value="" />
+                    <input class="fr" value=""  bindinput="dh_bt"/>
                   </view>
 
                   <view class="box">
                     <view class="qt">企业名称：</view>
-                    <input class="fr" value="" />
+                    <input class="fr" value="" bindinput="mc_bt"/>
                   </view>
 
                   <view class="box">
-                    <view class="qt">企业简介：</view>
+                    <view class="qt" bindblur="bindTextAreaBlur">企业简介：</view>
                     
-                    <textarea class="fr" value="" style="height:100rpx;"/>
+                    <textarea class="fr" value="" style="height:100rpx;"  bindinput="js_bt"/>
                   </view>
                  
                 
@@ -31,10 +31,14 @@
             <view class="box">
                     <view class="qt">附件信息：</view>
                     
-                     <view class="weui-uploader__bd fr">
+                     <view class="weui-uploader__bd">
                             <view class="weui-uploader__files" id="uploaderFiles">
                                 
-                               
+                                <block wx:for="{{files}}" wx:key="*this">
+                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                    </view>
+                                </block>
                             </view>
                             <view class="weui-uploader__input-box">
                                 <view class="weui-uploader__input" bindtap="chooseImage"></view>
