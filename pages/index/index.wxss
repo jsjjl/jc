@@ -55,3 +55,5 @@
 .pl .pl_box:last-child{ border: 0;}
 
 .sq{ width: 90px; height: 90px; position: fixed; right:20px; bottom: 20px; z-index: 99; }
+
+.qy .weui-loadmore{ margin-left:-15rpx;}

@@ -4,7 +4,7 @@
   <view class="top">
   <text class="top_bt">{{companyName}}</text>
   <view class="top_box">
-    <span>{{score}}分</span>
+    <span>{{score}}分<image class="index_top_img index_top_img{{isAddV}}" src="../img/v.png" mode="widthFix"></image></span>
     <p class=""><image class="topbj" mode="widthFix" src="../img/dw.png"></image>{{address}}</p>
     <p class=""><image class="topbj" mode="widthFix" src="../img/sj.png"></image>{{phone}}
     <em>管道</em><em>涂料</em>
@@ -34,10 +34,23 @@
 
           </block>
 
+          <view class="tr {{jiazai_cp?'show':'hide'}}" style="padding: 10px 0;font-size:12px;  text-align: center;color: #969696;">
+                   <view class="weui-loadmore ">
+                        <view class="weui-loading"></view>
+                        <view class="weui-loadmore__tips">正在加载</view>
+                    </view>
+          </view>
+
+          <view class="tr {{wu_cp?'show':'hide'}}" style="padding: 10px 0;font-size:12px;  text-align: center;color: #969696;">
+                  暂无产品
+          </view>
+
+          
+
 
           
       </view>
-      <p class="more" bindtap="cppostClick">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p>
+      <!-- <p class="more" bindtap="cppostClick">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p> -->
   </view>
 
 </view>
@@ -105,6 +118,16 @@
 </view>
 
  </block>
+
+   <view class="clear"></view>
+      <view class="weui-loadmore {{jiazai_pl?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+  <view class="clear"></view>
+        <view class="weui-loadmore weui-loadmore_line {{wu_pl?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
 
 
 <!-- <view class="pl_box">

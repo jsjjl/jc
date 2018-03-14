@@ -61,7 +61,15 @@
 </block>
         
 
-
+  <view class="clear"></view>
+      <view class="weui-loadmore {{jiazai?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+  <view class="clear"></view>
+        <view class="weui-loadmore weui-loadmore_line {{wu?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
 
 
 
@@ -106,7 +114,20 @@
       
       </view>
 
+
   </block>
+
+
+  <view class="clear"></view>
+      <view class="weui-loadmore {{jiazai2?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+  <view class="clear"></view>
+        <view class="weui-loadmore weui-loadmore_line {{wu2?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+
     <!-- <view class="list_box" bindtap="postClick">
         <image class="list_boximg" src="../img/bj.png" mode="widthFix"></image>
         <view class="list_box_r"><p>上海酒店企业管理有限公司2</p>

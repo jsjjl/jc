@@ -11,7 +11,7 @@
 .top_box{  width: 100%; height: auto; display: block; float: left; position: relative;}
 .top_box span{ width:auto; height: auto; display: block; float: left; color: #FFBA44; font-size: 18px; top: -10px; right: 10px; position: absolute;}
 .top_box span{ width:auto; height: auto; display: block; float: left; color: #FFBA44; font-size: 18px; top: -10px; right: 10px; position: absolute;}
-.top_box p{ width:100%; height: auto; display: block; float: left; color: #8A8A8A; font-size: 12px;  margin: 10px 0 0; line-height: 22px;}
+.top_box p{ width:100%; height: auto; display: block; float: left; color: #8A8A8A; font-size: 12px;  margin: 13px 0 0; line-height: 22px;}
 .top_box p image{ width:15px; height: 15px; display: block; float: left; color: #8A8A8A; font-size: 12px;  margin: 3px 10px 0 0;}
 .top_box p em{color:#FFBA44; font-size: 11px; padding: 3px 6px; background: #F6F9FF; color: #86A0C3; display: block; float: right; margin-left: 5px; text-align: center; line-height: 10px; font-size: 11px; margin-top: 4px;}
 .nr{width: 90%; padding: 10px 5%; height: auto; display: block; float: left; background: #ffffff; margin-bottom: 15px; }
@@ -177,3 +177,7 @@ color: #444444;
  
 
 button[type="default"][plain][disabled]  {border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
+
+.index_top_img{ width: 40rpx; height: 50rpx;display: block; float: right; margin-left: 5px;}
+.index_top_img0{display: none;}
+.index_top_img1{display: block;}

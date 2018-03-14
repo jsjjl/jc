@@ -5,7 +5,7 @@
 
 
              <view class="wxh">微信号<em>
-                    7834295wlx
+                    {{wxh}}
                 </em>
                 
                 
@@ -16,7 +16,7 @@
 
                 <view class="box" bindtap="ncClick">
                     <view class="qt">昵称</view>
-                    <span class=" weui-select fr">啊哈哈</span>
+                    <span class=" weui-select fr">{{nc}}</span>
                 </view>
                
            

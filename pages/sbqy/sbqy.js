@@ -9,37 +9,98 @@ var companyLinkman//企业联系人
 	
 		,companyName//企业名称
 	
-		,companyProfile//企业简介
+    ,companyProfile//企业简介
+    
+    ,fileNum = 0//文件个数
 	
     ,fileUrl;//文件url
                  
 Page({
   data: {
-    files: []
+    files: [],
+    lxr_inputVal: "",
+    mc_inputVal: "",
+    dh_inputVal: "",
+    js_inputVal: "",
+    
   },
   chooseImage: function (e) {
+
+    
+    // var that = this; 
+    // wx.chooseImage({
+    //   count: 1, // 默认9
+    //   sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+    //   sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+    //   success: function (res) {
+    //     // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+    //     var tempFilePaths = res.tempFilePaths;
+    //     that.upload(that, tempFilePaths);
+    //   }
+    // })
+
+
+
       var that = this;
       wx.chooseImage({
           sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
           sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
           
+          
           success: function (res) {
-            var tempFilePaths = res.tempFilePaths
+            var tempFilePaths = res.tempFilePaths;
+            console.log(tempFilePaths[0]);
+            wx.showToast({
+                  icon: "loading",
+                  title: "正在上传"
+            });
             wx.uploadFile({
               url: UploadVideo, //仅为示例，非真实的接口地址
               filePath: tempFilePaths[0],
-              name: 'file',
+              name: 'upfile',
               formData:{
                 // 'user': 'test'
               },
               success: function(res){
                 var data = res.data
-                console.log("返回的数据",res)
+                console.log("返回的数据0",res)
+                console.log("返回的数据1",res.statusCode)
+
+                var adata=JSON.parse(res.data);
+                console.log("返回的数据2",adata.state);
+
+                if (res.statusCode != 200 || adata.state != 200) { 
+                            wx.showModal({
+                              title: '提示',
+                              content: '上传失败',
+                              showCancel: false
+                    })
+                            return;
+                }
                  // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                   that.setData({
-                    files: that.data.files.concat(res.tempFilePaths)
+                    files: that.data.files.concat("https://"+adata.data)
                 });
+                fileNum ++;
+                console.log("图片个数：", fileNum)
+                if(fileNum == 1){
+                  fileUrl = "https://"+adata.data
+                }else{
+                  fileUrl = fileUrl + ",https://" + adata.data 
+                }
 
+
+              },
+              fail: function (e) {
+                console.log("上传失败:",e);
+                wx.showModal({
+                  title: '提示',
+                  content: '上传失败',
+                  showCancel: false
+                })
+              },
+              complete: function () {
+                wx.hideToast();  //隐藏Toast
               }
             })
 
@@ -47,7 +108,13 @@ Page({
           }
       })
   },
+
+
+
+
   previewImage: function(e){
+    console.log("当前显示图片的http链接:",e.currentTarget.id);
+    console.log("需要预览的图片http链接列表:",this.data.files);
       wx.previewImage({
           current: e.currentTarget.id, // 当前显示图片的http链接
           urls: this.data.files // 需要预览的图片http链接列表
@@ -69,7 +136,8 @@ Page({
 
 
   saveClick: function() {
-
+    var that = this;
+console.log(fileUrl)
     wx.request({
       url: declareCompany,
       // tag_id = e,
@@ -78,6 +146,7 @@ Page({
         phone: phone,
         companyName: companyName,
         companyProfile: companyProfile,
+        fileUrl:fileUrl,
       },
       
       success:function(res){
@@ -87,6 +156,16 @@ Page({
             icon: 'success',
             title: res.data.msg,
           });
+          fileNum = 0;
+
+          that.setData({
+            files: [],
+            lxr_inputVal: "",
+            mc_inputVal: "",
+            dh_inputVal: "",
+            js_inputVal: "",
+          })
+
         }else{
           wx.showToast({
             icon: 'loading',

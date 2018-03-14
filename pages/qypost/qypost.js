@@ -23,6 +23,11 @@ var datasbt_id = [""];
 
 Page({
   data:{
+    jiazai_cp:true,
+    wu_cp: false,
+    jiazai_pl:true,
+    wu_pl:false,
+    isAddV: 0,
     accounts: ["点评这家公司"],
     accountIndex: 0,
     accounts1: [],
@@ -93,11 +98,12 @@ Page({
 
           if(res.data.state == 0){
             console.log("企业:",res.data.company);
-            
+            console.log("企业2:",res.data.product);
 
             companyId = res.data.company.id;
 
             that.setData({
+              
               product_list:res.data.product,
               picture:res.data.company.picture,
               companyName:res.data.company.companyName,
@@ -105,11 +111,20 @@ Page({
               address:res.data.company.address,
               phone:res.data.company.phone,
               companyProfile:res.data.company.companyProfile,
-        
+              jiazai_cp: false,
+              isAddV:res.data.company.isAddV,
             });
             
             var datas = res.data.product;
-           
+            
+            if(res.data.product == undefined || res.data.product == ""){
+              that.setData({
+                wu_cp: true,
+                jiazai_cp: false,
+              })
+            };
+
+
             for(var i=0; i<datas.length; i++){
                datasbt.push(datas[i].productName);
                datasbt_id.push(datas[i].id);
@@ -156,10 +171,18 @@ Page({
 
           if(res.data.state == 0){
             console.log("评论:",res.data.data);
-            that.setData({
-              pl_list:res.data.data
-            })
 
+            if(res.data.data == undefined || res.data.data == ""){
+              that.setData({
+                wu_pl: true,
+                jiazai_pl: false
+              })
+            }else{
+            that.setData({
+              pl_list:res.data.data,
+              jiazai_pl:false,
+            })
+          }
 
           }else{
             wx.showToast({

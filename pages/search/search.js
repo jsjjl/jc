@@ -3,6 +3,8 @@ const heatSearch = require('../../config').heatSearch;
 
 Page({
     data: {
+        jiazai:true,
+        wu:false,
         inputShowed: false,
         inputVal: "",
         qbqy_list:[],
@@ -22,9 +24,17 @@ Page({
         success:function(res){
           if(res.data.state == 0){
             console.log("全部企业:",res.data.data);
+            if(res.data.data == undefined || res.data.data == ""){
+              that.setData({
+                wu: true,
+                jiazai: false
+              })
+            }else{
             that.setData({
-               rmqy_list:res.data.data
+               rmqy_list:res.data.data,
+               jiazai: false
             })
+          }
           }else{
             wx.showToast({
               icon: 'loading',

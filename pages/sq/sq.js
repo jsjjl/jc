@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp();
+const loginByWX = require('../../config').loginByWX;
 
 var  uid,
 icon,
@@ -9,7 +10,6 @@ gender;
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -21,7 +21,7 @@ Page({
     })
   },
   onLoad: function () {
-var that= this;
+    var that= this;
 
     //调用应用实例的方法获取全局数据  
     that.getUserInfo();
@@ -83,7 +83,13 @@ var that= this;
                           }  
                      });
               } else {
-                console.log('获取用户登录态失败！' + res.errMsg)
+
+                wx.showModal({
+                  title: '提示',
+                  content: '获取用户登录态失败！' + res.errMsg,
+                  showCancel: false
+                })
+                
               }
             }
           });
@@ -92,9 +98,49 @@ var that= this;
 
 
   loginClick: function(e){
-    wx.navigateTo({
-      url:"../myedit/myedit"
-    })
+console.log(loginByWX+'?uid='+uid+'&wxName='+wxName+'&gender='+gender+'&icon='+icon)
+    wx.request({
+      
+      url: loginByWX,
+
+      data: {
+        uid: uid,
+        icon: icon,
+        wxName: wxName,
+        gender: gender,
+      },
+      
+      success:function(res){
+
+        if(res.data.state == 0){
+          wx.navigateTo({
+            url:'../myedit/myedit?myid=' + res.data.id //传参跳转
+          })
+
+        }else{
+          wx.showToast({
+            icon: 'loading',
+            title: res.data.msg,
+          });
+        }
+
+      },
+      fail:function(res){
+          wx.showToast({
+              icon: 'loading',
+              title: "服务器忙请稍后",
+            });
+           
+      }
+    });
+
+
+
+    
+
+
+
+
   },
   juClick: function(e){
     wx.navigateTo({

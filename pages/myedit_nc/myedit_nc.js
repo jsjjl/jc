@@ -1,10 +1,55 @@
+const edituserinfo = require('../../config').edituserinfo;
+var myid,
+    bdnc;
+
 Page({
   data: {
-      
+    nc:""
   },
-  saveClick: function() {
-    wx.navigateTo({
-      url: '../myedit/myedit'
+  onLoad: function (options) {
+    var that = this;
+    myid = options.myid;
+    bdnc = options.bdnc;
+    that.setData({
+      nc:bdnc
     })
+  },
+
+  saveClick: function() {
+     var that = this;
+     bdnc = that.data.nc;
+    console.log(bdnc)
+    wx.request({
+      url: edituserinfo,
+      data: {
+          myid: myid,
+          nickName: bdnc
+      },
+      
+      success:function(res){
+        if(res.data.state == 0){
+          wx.showToast({
+            icon: 'success',
+            title: res.data.msg,
+          });
+        }else{
+          wx.showToast({
+            icon: 'loading',
+            title: res.data.msg,
+          });
+        }
+
+      },
+      fail:function(res){
+          wx.showToast({
+              icon: 'loading',
+              title: "服务器忙请稍后",
+            });
+           
+      }
+    });
+
+
+
   }
 })

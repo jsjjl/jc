@@ -5,23 +5,23 @@
                 
                   <view class="box">
                     <view class="qt">企业联系人：</view>
-                    <input class="fr" value="" bindinput="lxr_bt"/>
+                    <input class="fr" value="{{lxr_inputVal}}" bindinput="lxr_bt"/>
                   </view>
 
                   <view class="box">
                     <view class="qt">联系电话：</view>
-                    <input class="fr" value=""  bindinput="dh_bt"/>
+                    <input class="fr" value="{{dh_inputVal}}"  bindinput="dh_bt"/>
                   </view>
 
                   <view class="box">
                     <view class="qt">企业名称：</view>
-                    <input class="fr" value="" bindinput="mc_bt"/>
+                    <input class="fr" value="{{mc_inputVal}}" bindinput="mc_bt"/>
                   </view>
 
                   <view class="box">
                     <view class="qt" bindblur="bindTextAreaBlur">企业简介：</view>
                     
-                    <textarea class="fr" value="" style="height:100rpx;"  bindinput="js_bt"/>
+                    <textarea class="fr" value="{{js_inputVal}}" style="height:100rpx;"  bindinput="js_bt"/>
                   </view>
                  
                 

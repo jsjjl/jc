@@ -27,6 +27,12 @@ var config = {
   declareCompany: `${host}/declareCompany`,
   //图片上传接口
   UploadVideo: "https://jiancai.dcofcity.com/yj_jiancai/Upload/UploadVideo",  
+  //登录
+  loginByWX: `${host}/loginByWX`, 
+  //获取用户信息
+  findWXUser: `${host}/findWXUser`, 
+  //修改用户信息
+  updateWXUser : `${host}/updateWXUser `, 
   
   
 

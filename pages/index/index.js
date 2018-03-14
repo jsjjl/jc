@@ -15,6 +15,10 @@ var authorization,
 
 Page({
   data: {
+    jiazai:true,
+    wu:false,
+    jiazai2:true,
+    wu2:false,
     tagClick_img1:'https://www.mlito.com/wx/jc/1a.png',
     tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
     tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
@@ -33,16 +37,26 @@ Page({
       url: findCommentList,
       // tag_id = e,
       data: {
-        
+        pageNum: 1,
+        pageSize: 10,
       },
       
       success:function(res){
 
         if(res.data.state == 0){
           console.log("评论:",res.data.data);
+
+          if(res.data.data == undefined || res.data.data == ""){
+            that.setData({
+              wu2: true,
+              jiazai2: false
+            })
+          }else{
           that.setData({
-            pl_list:res.data.data
+            pl_list:res.data.data,
+            jiazai2: false
           })
+        }
         }else{
           wx.showToast({
             icon: 'loading',
@@ -192,23 +206,37 @@ tagClick_box5: function(){
 
 //获取首页企业列表
   qy_list: function (e) {
+    
     var that = this;
     console.log(e);
+    that.setData({
+      jiazai:true
+    })
   
     wx.request({
       url: findCompanyList,
       // tag_id = e,
       data: {
           tagid: e,
-          isRecommend: 1
+          isRecommend: 1,
+          pageNum: 1,
+          pageSize: 6,
       },
       
       success:function(res){
         if(res.data.state == 0){
           console.log("热门企业:",res.data.data);
-          that.setData({
-            gs_list:res.data.data
-          })
+          if(res.data.data == undefined || res.data.data == ""){
+            that.setData({
+              wu: true,
+              jiazai: false
+            })
+          }else{
+            that.setData({
+              gs_list:res.data.data,
+              jiazai:false
+            })
+          }
         }else{
           wx.showToast({
             icon: 'loading',

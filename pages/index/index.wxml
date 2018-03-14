@@ -50,17 +50,17 @@
 
   <view class="clear"></view>
 
-  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cells weui-cells_after-title" bindtap="tagClick">
             <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                     <image class="qy_icon" src="../img/i_qy.png" mode="widthFix"></image>
                 </view>
                 <view class="weui-cell__bd">热门企业</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access" data-id="" bindtap="tagClick">更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"  >更多</view>
             </view>
   </view>
 
-  <view class="clear"></view>
+
 
   <view class="qy">
 
@@ -80,6 +80,16 @@
           <text class="qy_pf">评分：{{item.score}}分</text>
         </view>
       </block>
+      
+  <view class="clear"></view>
+      <view class="weui-loadmore {{jiazai?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+  <view class="clear"></view>
+        <view class="weui-loadmore weui-loadmore_line {{wu?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
 
 
       <!-- <view class="qy_box" bindtap="postClick">
@@ -87,48 +97,6 @@
           <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
           <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
           <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
-        </view>
-        <text class="qy_mc">上海兴致科技</text>
-        <text class="qy_pf">评分：999分</text>
-      </view>
-
-
-       <view class="qy_box" bindtap="postClick">
-        <view class="qy_box_top">
-          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
-          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
-          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
-        </view>
-        <text class="qy_mc">上海兴致科技</text>
-        <text class="qy_pf">评分：999分</text>
-      </view>
-
-
-       <view class="qy_box" bindtap="postClick">
-        <view class="qy_box_top">
-          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
-          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
-          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
-        </view>
-        <text class="qy_mc">上海兴致科技</text>
-        <text class="qy_pf">评分：999分</text>
-      </view>
-
-       <view class="qy_box" bindtap="postClick">
-        <view class="qy_box_top">
-          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
-          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
-          <image class="qy_tb" src="../img/i_qytb.png" mode="widthFix"></image>
-        </view>
-        <text class="qy_mc">上海兴致科技</text>
-        <text class="qy_pf">评分：999分</text>
-      </view>
-
-       <view class="qy_box" bindtap="postClick">
-        <view class="qy_box_top">
-          <image class="qy_k" src="../img/i_qyk.png" mode="widthFix"></image>
-          <image class="qy_bj" src="../img/i_qybj.png" mode="widthFix"></image>
- 
         </view>
         <text class="qy_mc">上海兴致科技</text>
         <text class="qy_pf">评分：999分</text>
@@ -173,6 +141,17 @@
         </view>
 </view>
  </block>
+
+   <view class="clear"></view>
+      <view class="weui-loadmore {{jiazai2?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+  <view class="clear"></view>
+        <view class="weui-loadmore weui-loadmore_line {{wu2?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+
 
     
 
