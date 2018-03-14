@@ -14,17 +14,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
     var that= this;
-
-    //调用应用实例的方法获取全局数据  
-    that.getUserInfo();
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -52,19 +44,13 @@ Page({
       })
     }
 
-
+    if(that.data.hasUserInfo == true){
+      that.getUserInfo();
+    }
 
 
   },
-  // getUserInfo: function(e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo,
-  //     hasUserInfo: true
-  //   })
-  // },
-
+ 
          //获取用户信息
          getUserInfo:function(){ 
           var that = this;  
@@ -73,13 +59,19 @@ Page({
             success: function(res) {
               if (res.code) {
                   uid = res.code
-                  console.log(uid);
+                  console.log("获取的ID：",uid);
                   wx.getUserInfo({  
                      success: function (res) {
+
+                      that.setData({
+                        userInfo: res.userInfo,
+                        hasUserInfo: true
+                      })
+
                             wxName = res.userInfo.nickName;
                             icon = res.userInfo.avatarUrl;
                             gender = res.userInfo.gender;
-                            console.log(wxName,icon,gender);
+                            console.log("getUserInfo获取的：",wxName,icon,gender);
                           }  
                      });
               } else {
@@ -98,7 +90,9 @@ Page({
 
 
   loginClick: function(e){
+
 console.log(loginByWX+'?uid='+uid+'&wxName='+wxName+'&gender='+gender+'&icon='+icon)
+    
     wx.request({
       
       url: loginByWX,
