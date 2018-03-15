@@ -14,7 +14,7 @@ content,
 phone,
 nickName,
 companyId,
-productId = "",
+productId = 0,
 score = 5,
 addTime;
 

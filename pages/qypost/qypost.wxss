@@ -59,7 +59,7 @@ color: #444444;
   .pl_top{ margin: 0;}
 
 .pl{width:100%; display: block; float: left; background: #ffffff; border-top: 1px solid #F3F3F3; }
-.pl_box{ position: relative; height: auto; display: block; float: left; margin: 3px 0 8px;border-bottom:0rpx solid #F3F3F3}
+.pl_box{ position: relative; height: auto; display: block; float: left; margin: 3px 0 8px;border-bottom:0rpx solid #F3F3F3; width: 100%;}
 .pl_tx {border-radius: 30px; width: 30px; height: 30px; overflow: hidden; display: block; float: left; margin: 10px 10px 0;}
 .pl_xm{ display: block; float: left; width: 70%; font-size: 13px;}
 .pl_pf{ display: block; float: right; width: 25%; color: #aaaaaa; text-align: right; font-size: 12px;}
@@ -78,8 +78,10 @@ color: #444444;
 .pl_x1 em{ font-size: 16px; color: #FFBA44; margin: 0 0 -5px 5px;}
 
 .pl_tt{width: 100%; height: auto; background: #ffffff; display: block; float: left; margin-bottom: 15px;}
-.pl_tt textarea{width: 55%;  background: #ffffff; border-radius: 5px; border: 1px solid #D2D2D2; display: block; float: left; margin-left: 5%; height: 15px; margin-top: 5px; font-size: 13px; line-height: 15px; height:50px; padding: 12.5px 2%; display: block;}
-.pl_tt button{width: 30%; height: auto; display: block; height: 42px; line-height: 42px; margin-top: 5px; float: right; margin-right: 4%; border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
+.pl_tt input{width: 55%;  background: #ffffff; border-radius: 5px; border: 1px solid #D2D2D2; display: block; float: left; margin-left: 5%; height: 15px; 
+  margin-top: 5px; font-size: 13px; line-height: 40px; height:40px; padding: 0 2%; display: block; position: relative; z-index: 1;}
+.pl_tt button{width: 30%; height: auto; display: block; height: 42px; line-height: 42px; margin-top: 5px; float: right; margin-right: 4%; 
+  border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
 
 
 /*模态框*/
@@ -89,14 +91,15 @@ color: #444444;
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index:999;
+  z-index:10;
+   z-index: 999999999999999999;
  }
  .wxapp-modal .content{
   width: 80%; height: auto;
   top: 30%;
   text-align: center;
   position: absolute; background: #ffffff;
-  z-index: 9999999999999; left: 10%;
+  z-index: 20; left: 10%;
  }
  .wxapp-modal .content .header{
   margin: auto;
@@ -173,6 +176,7 @@ color: #444444;
   position: fixed;
   top: 0px;
   background-color:rgba(0,0,0,0.5);
+
  }
  
 

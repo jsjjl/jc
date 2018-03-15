@@ -14,11 +14,11 @@ Page({
     wu2:false,
     selected:true,
     selected1:false,
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
     tjqy_list:[],
     qbqy_list:[],
     },
@@ -26,35 +26,35 @@ Page({
       var that = this;
       if(options.tagid ==1){
         that.setData({
-          tagClick_img1:'https://www.mlito.com/wx/jc/1a.png'
+          tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1a.png'
         });
         this.tjqy_list(1);
         this.qbqy_list(1);
       }
       else if(options.tagid ==2){
         that.setData({
-          tagClick_img2:'https://www.mlito.com/wx/jc/2a.png'
+          tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2a.png'
         });
         this.tjqy_list(2);
         this.qbqy_list(2);
       }
       else if(options.tagid ==3){
         that.setData({
-          tagClick_img3:'https://www.mlito.com/wx/jc/3a.png'
+          tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3a.png'
         });
         this.tjqy_list(3);
         this.qbqy_list(3);
       }
       else if(options.tagid ==4){
         that.setData({
-          tagClick_img4:'https://www.mlito.com/wx/jc/4a.png'
+          tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4a.png'
         });
         this.tjqy_list(4);
         this.qbqy_list(4);
       }
       else if(options.tagid ==5){
         that.setData({
-          tagClick_img5:'https://www.mlito.com/wx/jc/5a.png'
+          tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5a.png'
         });
         this.tjqy_list(5);
         this.qbqy_list(5);
@@ -66,11 +66,11 @@ Page({
 tagClick_box1: function(){
   tag_id = 1;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1a.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1a.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.tjqy_list(1);
   this.qbqy_list(1);
@@ -78,11 +78,11 @@ tagClick_box1: function(){
 tagClick_box2: function(){
   tag_id = 2;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2a.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2a.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.tjqy_list(2);
   this.qbqy_list(2);
@@ -90,11 +90,11 @@ tagClick_box2: function(){
 tagClick_box3: function(){
   tag_id = 3;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3a.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3a.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.tjqy_list(3);
   this.qbqy_list(3);
@@ -102,11 +102,11 @@ tagClick_box3: function(){
 tagClick_box4: function(){
   tag_id = 4;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4a.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4a.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.tjqy_list(4);
   this.qbqy_list(4);
@@ -114,11 +114,11 @@ tagClick_box4: function(){
 tagClick_box5: function(){
   tag_id = 5;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5a.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5a.png',
   });
   this.tjqy_list(5);
   this.qbqy_list(5);

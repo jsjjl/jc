@@ -1,4 +1,4 @@
-const edituserinfo = require('../../config').edituserinfo;
+const updateWXUser = require('../../config').updateWXUser;
 var myid,
     bdnc;
 
@@ -14,15 +14,20 @@ Page({
       nc:bdnc
     })
   },
-
+  input_bt: function(e) {
+    var that = this;
+    that.setData({
+      nc:e.detail.value
+    })
+  },
   saveClick: function() {
      var that = this;
      bdnc = that.data.nc;
     console.log(bdnc)
     wx.request({
-      url: edituserinfo,
+      url: updateWXUser,
       data: {
-          myid: myid,
+          id: myid,
           nickName: bdnc
       },
       

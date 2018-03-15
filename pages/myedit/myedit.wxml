@@ -16,7 +16,7 @@
 
                 <view class="box" bindtap="ncClick">
                     <view class="qt">昵称</view>
-                    <span class=" weui-select fr">{{nc}}</span>
+                    <span class=" weui-select fr"></span>
                 </view>
                
            

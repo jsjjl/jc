@@ -26,7 +26,7 @@ Page({
             console.log("全部企业:",res.data.data);
             if(res.data.data == undefined || res.data.data == ""){
               that.setData({
-                wu: true,
+                wu: false,
                 jiazai: false
               })
             }else{
@@ -105,9 +105,19 @@ Page({
         success:function(res){
           if(res.data.state == 0){
             console.log("全部企业:",res.data.data);
+
+            if(res.data.data == undefined || res.data.data == ""){
+              that.setData({
+                qbqy_list:res.data.data,
+                wu: true,
+                jiazai: false
+              })
+            }else{
             that.setData({
-              qbqy_list:res.data.data
+              qbqy_list:res.data.data,
+              jiazai: false
             })
+          }
           }else{
             wx.showToast({
               icon: 'loading',

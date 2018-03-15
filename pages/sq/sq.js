@@ -106,16 +106,20 @@ console.log(loginByWX+'?uid='+uid+'&wxName='+wxName+'&gender='+gender+'&icon='+i
       
       success:function(res){
 
-        if(res.data.state == 0){
-          wx.navigateTo({
-            url:'../myedit/myedit?myid=' + res.data.id //传参跳转
-          })
+      var lsid =  res.data.data.id;
+      console.log("1id:",lsid);
 
+        if(res.data.state == 200){
+          wx.redirectTo({
+            url:'../myedit/myedit?myid=' + lsid//传参跳转
+          })
+        
         }else{
           wx.showToast({
             icon: 'loading',
             title: res.data.msg,
           });
+          console.log("后台代码：",res.data.state,res.data.msg)
         }
 
       },

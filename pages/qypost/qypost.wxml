@@ -84,6 +84,10 @@
 
 
 </view>
+
+
+
+
 <view class="pl_x1">请选择评分：
     
     <span  bindtap="chooseicon">
@@ -97,10 +101,9 @@
     <em>{{dpfs}}分</em></view>
 
 <view class="pl_tt">
-  <textarea class="weui-textarea" placeholder="多行输入" bindblur="bindTextAreaBlur" auto-height/>
+  <input class="weui-textarea" placeholder="请输入" bindinput="bindTextAreaBlur" />
   <button class="weui-btn" type="default" disabled="{{tjxs}}" plain="true" bindtap="tjpl">提交</button>
 </view>
-
 </view>
 
 <view class="pl">
@@ -111,7 +114,7 @@
       <view class="pl_box" index="{{index}}" data-id="{{item.id}}" >
       <image class="pl_tx" src="{{item.icon}}"  mode="widthFix"/>
       <view class="pl_r">
-        <view class="pl_rt"><span class="pl_xm ell">{{item.companyName}}--{{item.productName}}</span><em class="pl_pf">评分：{{item.score}}分</em></view>
+        <view class="pl_rt"><span class="pl_xm ell">{{item.companyName}}{{item.productName == null? '' : '--'}}{{item.productName}}</span><em class="pl_pf">评分：{{item.score}}分</em></view>
         <view class="pl_sj">{{item.addTime}}</view>
         <view class="pl_nr">{{item.content}}</view>
         </view>
@@ -141,10 +144,6 @@
       
 </view>
 
-
-</view>
-
-
 <view class="wxapp-modal" style="{{modal_style}}">
      <view class="content">
     <view class="header">输入手机号发布评论
@@ -156,3 +155,8 @@
      </view></view>
     <view class="mask" bindtap="closeModal"></view>
 </view>
+
+
+</view>
+
+

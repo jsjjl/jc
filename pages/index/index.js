@@ -8,22 +8,17 @@ const findCommentList = require('../../config').findCommentList;
 var authorization,
     tag_id = 1;
 
-    // https://jiancaifile.dcofcity.com/image/1.png
-    // https://jiancaifile.dcofcity.com/image/1.png
-
-    
-
 Page({
   data: {
     jiazai:true,
     wu:false,
     jiazai2:true,
     wu2:false,
-    tagClick_img1:'https://www.mlito.com/wx/jc/1a.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1a.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
     gs_list:[],
     pl_list:[],
   },
@@ -118,55 +113,55 @@ Page({
 tagClick_box1: function(){
   tag_id = 1;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1a.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1a.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.qy_list(1);
 },
 tagClick_box2: function(){
   tag_id = 2;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2a.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2a.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.qy_list(2);
 },
 tagClick_box3: function(){
   tag_id = 3;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3a.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3a.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.qy_list(3);
 },
 tagClick_box4: function(){
   tag_id = 4;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4a.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4a.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
   });
   this.qy_list(4);
 },
 tagClick_box5: function(){
   tag_id = 5;
   this.setData({
-    tagClick_img1:'https://www.mlito.com/wx/jc/1.png',
-    tagClick_img2:'https://www.mlito.com/wx/jc/2.png',
-    tagClick_img3:'https://www.mlito.com/wx/jc/3.png',
-    tagClick_img4:'https://www.mlito.com/wx/jc/4.png',
-    tagClick_img5:'https://www.mlito.com/wx/jc/5a.png',
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5a.png',
   });
   this.qy_list(5);
 },

@@ -8,7 +8,7 @@
                 
                   <view class="box">
                     <view class="qt">昵称</view>
-                    <input class=" fr" value="{{nc}}" />
+                    <input class=" fr" value="{{nc}}" bindinput="input_bt"/>
                 </view>
                 
                 

@@ -14,6 +14,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     myid = options.myid;
+    console.log(options.myid);
 
     wx.request({
         url: findWXUser,
@@ -23,7 +24,7 @@ Page({
         
         success:function(res){
           if(res.data.state == 0){
-            bdnc = res.data.data.nc;
+            bdnc = res.data.data.nickName;
             that.setData({
                 accountIndex:res.data.data.gender,
                 wxh:res.data.data.wxName,
@@ -49,13 +50,14 @@ Page({
   },
     bindAccountChange: function(e) {
         console.log('picker account 发生选择改变，携带值为', e.detail.value);
-
+        
         var xmid = e.detail.value;
+        console.log(updateWXUser+"?id="+myid+"&gender="+xmid);
         var that = this;
         wx.request({
             url: updateWXUser,
             data: {
-                myid: myid,
+                id: myid,
                 gender: xmid
             },
             
