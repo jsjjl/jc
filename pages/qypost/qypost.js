@@ -47,6 +47,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    tag_type:""
     },
     onLoad: function (options) {
       var that = this;
@@ -113,6 +114,7 @@ Page({
               companyProfile:res.data.company.companyProfile,
               jiazai_cp: false,
               isAddV:res.data.company.isAddV,
+              tag_type:res.data.company.type,
             });
             
             var datas = res.data.product;

@@ -7,7 +7,7 @@
     <span>{{score}}分<image class="index_top_img index_top_img{{isAddV}}" src="../img/v.png" mode="widthFix"></image></span>
     <p class=""><image class="topbj" mode="widthFix" src="../img/dw.png"></image>{{address}}</p>
     <p class=""><image class="topbj" mode="widthFix" src="../img/sj.png"></image>{{phone}}
-    <em>管道</em><em>涂料</em>
+    <em>{{tag_type}}</em>
     </p>
   </view>
 

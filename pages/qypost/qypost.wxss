@@ -71,17 +71,23 @@ color: #444444;
 .pl .pl_box:last-child{ border: 0;}
 .weui-cell {padding:15px 15px;}
 .pl_x{ width: 100%; height: auto; background: #ffffff; display: block; float: left;}
-.pl_x1{ font-size: 12px;  width: 90%; margin: 8px 5%; color: #5F5F5F; line-height: 30px;}
-.pl_x1 picker{ font-size: 11px;  width: auto; margin:0 5px 0 0; padding: 0 5px; line-height: 25px; border-radius: 5px; display: inline-block; float: none; border: 1px solid #D2D2D2; color: #D2D2D2;}
-.pl_x1 picker .weui-select { border: 0;min-height:25px; height: 25px; line-height: 25px; padding-right: 25px;}
-.pl_x1 image{ width: 20px;  display: inline-block; float: none; margin:0 0px 0 0; padding: 0 0px;}
-.pl_x1 em{ font-size: 16px; color: #FFBA44; margin: 0 0 -5px 5px;}
+.pl_x1{ font-size: 12px;  width: 90%; margin: 8px 5%; color: #5F5F5F; line-height: 25px;}
+.pl_x1 picker{ font-size: 11px;  width: auto; margin:0 5px 0 0; padding: 5px 0px; line-height: 25px; border-radius: 5px; display: inline-block; float: none; border: 1px solid #D2D2D2; color:#1E1E1E;}
+.pl_x1 picker .weui-select { border: 0;min-height:25px; height: 25px; line-height: 25px; padding-right:20px; font-size: 13px; padding-left: 5px;}
+.pl_x1 image{ width: 20px;  display: inline-block; float: none; margin:0 0px -3px 0; padding: 0 0px;}
+.pl_x1 em{ font-size: 13px; color: #FFBA44;display: inline-block;  margin: 0 0 -8px 5px; line-height: 20px;}
+
+
+
+.weui-select:before{right:7px; }
+
 
 .pl_tt{width: 100%; height: auto; background: #ffffff; display: block; float: left; margin-bottom: 15px;}
 .pl_tt input{width: 55%;  background: #ffffff; border-radius: 5px; border: 1px solid #D2D2D2; display: block; float: left; margin-left: 5%; height: 15px; 
   margin-top: 5px; font-size: 13px; line-height: 40px; height:40px; padding: 0 2%; display: block; position: relative; z-index: 1;}
 .pl_tt button{width: 30%; height: auto; display: block; height: 42px; line-height: 42px; margin-top: 5px; float: right; margin-right: 4%; 
   border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
+
 
 
 /*模态框*/
@@ -182,6 +188,6 @@ color: #444444;
 
 button[type="default"][plain][disabled]  {border-color: #D2D2D2; background: #D2D2D2;color: #ffffff;}
 
-.index_top_img{ width: 40rpx; height: 50rpx;display: block; float: right; margin-left: 5px;}
+.index_top_img{ width: 38rpx; height: auto;display: block; float: right; margin-left: 5px;margin-top: 5px;}
 .index_top_img0{display: none;}
 .index_top_img1{display: block;}
