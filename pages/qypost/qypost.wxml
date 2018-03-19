@@ -70,12 +70,12 @@
 
 <view class="pl_x">
 <view class="pl_x1">请选择点评对象：
-    
+    <!--
     <picker disabled="{{gsdisabled}}" value="{{accountIndex}}" range="{{accounts}}" >
                 <view class="weui-select">{{accounts[accountIndex]}}</view>
      </picker>
-
-            <picker bindchange="bindAccountChange1" value="{{accountIndex1}}" range="{{accounts1}}" style=" margin-right:0;">
+-->
+          <picker bindchange="bindAccountChange1" value="{{accountIndex1}}" range="{{accounts1}}" style=" margin-right:0;">
               <view class="weui-select">{{accounts1[accountIndex1]}}</view>
           </picker>
      

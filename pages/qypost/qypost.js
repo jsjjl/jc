@@ -10,16 +10,16 @@ var util = require('../../utils/util.js');
 var uid,
 icon,
 wxName,
-content,
+content = "",
 phone,
 nickName,
 companyId,
-productId = 0,
+productId = "",
 score = 5,
 addTime;
 
-var datasbt = ["选择产品"];
-var datasbt_id = [""];
+var datasbt = ["点评公司或产品","点评公司"];
+var datasbt_id = ["","0"];
 
 Page({
   data:{
@@ -127,7 +127,7 @@ Page({
               })
             };
 
-
+            datasbt = ["点评公司或产品","点评公司"];
             for(var i=0; i<datas.length; i++){
                datasbt.push(datas[i].productName);
                datasbt_id.push(datas[i].id);
@@ -222,7 +222,17 @@ Page({
 
     this.setData({
         accountIndex1: e.detail.value
-    })
+    });
+
+    if(content != "" && productId != "" ){
+      this.setData({
+        tjxs:false
+      })
+    }else{
+      this.setData({
+        tjxs:true
+      })
+    };
 },
   cppostClick: function() {
     wx.navigateTo({
@@ -257,9 +267,16 @@ Page({
     bindTextAreaBlur: function(e) {
       console.log(e.detail.value);
       content = e.detail.value;
-      this.setData({
-        tjxs:false
-      })
+      console.log(productId);
+      if(productId != "" && content != "" ){
+        this.setData({
+          tjxs:false
+        })
+      }else{
+        this.setData({
+          tjxs:true
+        })
+      }
     },
     
     //提交评论
