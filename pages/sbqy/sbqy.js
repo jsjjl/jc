@@ -154,7 +154,9 @@ console.log(fileUrl)
           console.log("是否成功:",res.data);
           wx.showToast({
             icon: 'success',
-            title: res.data.msg,
+            title: "您已提交成功",
+            duration: 2000
+            // title: res.data.msg,<br/>请保持通讯畅通
           });
           fileNum = 0;
 

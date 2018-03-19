@@ -146,12 +146,12 @@
 
 <view class="wxapp-modal" style="{{modal_style}}">
      <view class="content">
-    <view class="header">输入手机号发布评论
-     </view>
+    <view class="header">确认提交评论？</view>
     <view class="body">
-        <input placeholder="输入姓名" bindinput="bindKeyInput_xm"/>
-        <input placeholder="输入手机号" maxlength="11" type="number" bindinput="bindKeyInput_sjh"/>
-        <view class="tjpl" bindtap="tjpl_ok">提交评论</view>
+        <!-- <input placeholder="输入姓名" bindinput="bindKeyInput_xm"/>
+        <input placeholder="输入手机号" maxlength="11" type="number" bindinput="bindKeyInput_sjh"/> -->
+        <view class="tjpl" bindtap="tjpl_ok">确认</view>
+        <view class="tjpl tjpr" bindtap="tjpl_on">取消</view>
      </view></view>
     <view class="mask" bindtap="closeModal"></view>
 </view>

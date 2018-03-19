@@ -47,7 +47,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    tag_type:""
+    tag_type:"",
+ 
     },
     onLoad: function (options) {
       var that = this;
@@ -271,16 +272,31 @@ Page({
      
       },
       bindKeyInput_sjh: function(e) {
-phone= e.detail.value
+
+        phone= e.detail.value;
+        // this.setData({
+        //   storage_sjh:e.detail.value
+        // })
         
       },bindKeyInput_xm: function(e) {
         
-        nickName= e.detail.value
+        nickName= e.detail.value;
+        // this.setData({
+        //   storage_xm:e.detail.value
+        //  })
         
       },
-
+      tjpl_on: function(e) {
+         
+    this.setData({
+      modal_style:"display:none",
+     })
+      
+      },
 //最终提交评论
 tjpl_ok: function(e) {
+  // wx.setStorageSync('storage_xm', this.data.storage_xm);
+  // wx.setStorageSync('storage_sjh', this.data.storage_sjh);
   var that = this;
   // var time = util.formatTime(new Date());
   // console.log(time)  

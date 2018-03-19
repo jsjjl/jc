@@ -45,7 +45,7 @@
                             </view>
                         </view>
                   </view>
-            <em>注：请保持联系人电话通畅，稍后会有客户联系确认企业及产品信息</em>
+            <em>注：请保持联系人电话通畅，稍后会有客户联系确认企业及产品信息, 联系电话：13818520346</em>
             </view>
 
  <button class="weui-btn tc" type="primary" bindtap="saveClick">提交</button>
