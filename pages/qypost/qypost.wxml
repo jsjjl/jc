@@ -7,14 +7,22 @@
     <span>{{score}}分<image class="index_top_img index_top_img{{isAddV}}" src="../img/v.png" mode="widthFix"></image></span>
     <p class=""><image class="topbj" mode="widthFix" src="../img/dw.png"></image>{{address}}</p>
     <p class=""><image class="topbj" mode="widthFix" src="../img/sj.png"></image>{{phone}}
-    <em>{{tag_type}}</em>
+
+
+     <block wx:for="{{tag_type}}" wx:key="key" wx:for-index="idx">
+            <em index="{{index}}" data-id="{{tag_type[idx]}}" >{{tag_type[idx]}}</em>
+     </block>
+
+
     </p>
   </view>
 
   </view>
 
 <view class="nr">
-  <view class="nr_t">{{companyProfile}}</view>
+  <view class="nr_t {{genduo_wz?'nr_t1':'nr_t2'}}">{{companyProfile}}</view>
+
+   <p class="more {{genduo_wz?'show':'hide'}}" bindtap="wzpostClick">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p>
 
   <view class="container">
       <view class="table">
@@ -50,7 +58,7 @@
 
           
       </view>
-      <!-- <p class="more" bindtap="cppostClick">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p> -->
+      <p class="more {{genduo_cp?'show':'hide'}}" bindtap="cppostClick">查看更多  <image class="" mode="widthFix" src="../img/xl.png"></image></p>
   </view>
 
 </view>
@@ -75,7 +83,7 @@
                 <view class="weui-select">{{accounts[accountIndex]}}</view>
      </picker>
 -->
-          <picker bindchange="bindAccountChange1" value="{{accountIndex1}}" range="{{accounts1}}" style=" margin-right:0;">
+          <picker bindchange="bindAccountChange1" value="{{accountIndex1}}" range="{{accounts1}}" style="margin-right:0;">
               <view class="weui-select">{{accounts1[accountIndex1]}}</view>
           </picker>
      

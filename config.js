@@ -32,7 +32,9 @@ var config = {
   //获取用户信息
   findWXUser: `${host}/findWXUser`, 
   //修改用户信息
-  updateWXUser : `${host}/updateWXUser`, 
+  updateWXUser : `${host}/updateWXUser`,
+  //所有产品
+  findProductByCompanyIdForWX : `${host}/findProductByCompanyIdForWX`,
   
   
 

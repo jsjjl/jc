@@ -1,76 +1,40 @@
 <view class="index">
   
   
-  <view class="top">
+  <!-- <view class="top">
 <image class="topbj" mode="widthFix" src="../img/sg.png"></image>
-管道
-  </view>
+所有产品
+  </view> -->
 
 <view class="nr">
 
 
   <view class="container">
       <view class="table">
+
+
           <view class="tr">
               <view class="th">产品名称</view>
               <view class="th">产品类别</view>
               <view class="th">产品评分</view>
           </view>
+
+          
+      <block wx:for="{{product_list}}" wx:key="key">
+
+                <view class="tr" index="{{index}}" data-id="{{item.id}}" >
+                    <view class="td">{{item.productName}}</view>
+                    <view class="td">{{item.productType}}</view>
+                    <view class="td">{{item.productScore}}</view>
+                </view>
+
+          </block>
+<!--          
           <view class="tr">
               <view class="td">不锈钢管道</view>
               <view class="td">管道</view>
               <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
-          <view class="tr">
-              <view class="td">不锈钢管道</view>
-              <view class="td">管道</view>
-              <view class="td">999</view>
-          </view>
+          </view> -->
       </view>
      
   </view>

@@ -47,7 +47,26 @@
             <view class="ft"><i>{{item.score}}</i>分   |   <i>{{item.total}}</i>个产品   
             
 
+
+<!-- <block wx:for="{{[item.type]}}"  wx:for-item="i">
+  <em> {{i}} </em>
+</block>
+
+<view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+</view> -->
+
+
+
             <em>{{item.type}}</em>
+
+<!-- 
+            <block wx:for="{{tag_type}}" wx:key="key" wx:for-index="idx">
+                <em index="{{index}}" data-id="{{tag_type[idx]}}" >{{tag_type[idx]}}</em>
+            </block> -->
+
+
+
 
             <!-- <block wx:for="{{item.fl}}" wx:for-item="fl" wx:key="key2">
                 <em>{{fl.name}}</em>
@@ -101,13 +120,18 @@
             <view class="list_box_r"><p>{{item.companyName}} <block wx:if="{{item.isAddV == 1}}"><image class="index_top_img" src="../img/v.png" mode="widthFix"></image></block></p>
             <text class="dz ell">{{item.address}}</text>
             <view class="ft"><i>{{item.score}}</i>分   |   <i>{{item.total}}</i>个产品   
-            
+    
+
+<!-- <block wx:for="{{[item.type]}}">
+  <em> {{item}} </em>
+</block> -->
+
 
             <em>{{item.type}}</em>
 
-            <!-- <block wx:for="{{item.fl}}" wx:for-item="fl" wx:key="key2">
+            <block wx:for="{{item.type}}" wx:for-item="fl" wx:key="key2">
                 <em>{{fl.name}}</em>
-            </block> -->
+            </block>
             
             </view>
         </view>

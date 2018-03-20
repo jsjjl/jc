@@ -154,6 +154,8 @@ tagClick_box5: function(){
     that.setData({
       jiazai:true,
       wu:false,
+      tjqy_list:[],
+    qbqy_list:[],
     })
 
     console.log(e);
@@ -202,8 +204,12 @@ tagClick_box5: function(){
     that.setData({
       jiazai2:true,
       wu2:false,
+      tjqy_list:[],
+    qbqy_list:[],
     })
     console.log(e);
+
+    
     wx.request({
       url: findCompanyList,
       // tag_id = e,

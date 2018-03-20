@@ -71,90 +71,6 @@ Page({
     this.qy_list(1);
 
     
-    // wx.request({
-    //   url: findCommentList,
-    //   // tag_id = e,
-    //   data: {
-    //     pageNum: 1,
-    //     pageSize: 10,
-    //   },
-      
-    //   success:function(res){
-
-    //     if(res.data.state == 0){
-    //       console.log("评论:",res.data.data);
-
-    //       if(res.data.data == undefined || res.data.data == ""){
-    //         that.setData({
-    //           wu2: true,
-    //           jiazai2: false
-    //         })
-    //       }else{
-    //       that.setData({
-    //         pl_list:res.data.data,
-    //         jiazai2: false
-    //       })
-    //     }
-    //     }else{
-    //       wx.showToast({
-    //         icon: 'loading',
-    //         title: res.data.msg,
-    //       });
-    //     }
-
-    //   },
-    //   fail:function(res){
-    //       wx.showToast({
-    //           icon: 'loading',
-    //           title: "服务器忙请稍后",
-    //         });
-           
-    //   }
-    // });
-
-
-
-    
-
-
-    //url获取参数
-    // authorization = options.wx_id;
-    // console.log("接收到的参数是wx_id:", authorization); 
-
-    //ajax接口请求
-    // wx.request({
-    //     url: findPassClientList,
-        
-    //     data: {
-    //         authorization: authorization
-    //     },
-        
-    //     success:function(res){ 
-
-    //         if(res.data.state == 200){
-
-    //             console.log(res.data.data);
-
-    //         }else{
-
-    //           wx.showToast({
-    //             icon: 'loading',
-    //             title: res.data.msg,
-    //           })
-            
-    //        }
-          
-
-    //     },
-    //       fail:function(res){
-
-    //         wx.showToast({
-    //           icon: 'loading',
-    //           title: res.data.msg,
-    //         })
-
-    //     }
-    //   });
 
 },
 tagClick_box1: function(){
@@ -252,7 +168,9 @@ tagClick_box5: function(){
     var that = this;
     console.log(e);
     that.setData({
-      jiazai:true
+      jiazai:true,
+      wu:false,
+      gs_list:[],
     })
   
     wx.request({

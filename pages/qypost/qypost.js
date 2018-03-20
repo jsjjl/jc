@@ -4,6 +4,7 @@ const app = getApp();
 const findCompanyById = require('../../config').findCompanyById;
 const findCommentList = require('../../config').findCommentList;
 const insertComment = require('../../config').insertComment;
+const findProductByCompanyIdForWX = require('../../config').findProductByCompanyIdForWX;
 var util = require('../../utils/util.js');  
 
 
@@ -27,6 +28,8 @@ Page({
     wu_cp: false,
     jiazai_pl:true,
     wu_pl:false,
+    genduo_cp: false,
+    genduo_wz: false,
     isAddV: 0,
     accounts: ["点评这家公司"],
     accountIndex: 0,
@@ -47,8 +50,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    tag_type:"",
- 
+    tag_type:[],
     },
     onLoad: function (options) {
       var that = this;
@@ -90,6 +92,7 @@ Page({
 
 
       wx.request({
+
         url: findCompanyById,
         // tag_id = e,
         data: {
@@ -100,12 +103,33 @@ Page({
 
           if(res.data.state == 0){
             console.log("企业:",res.data.company);
-            console.log("企业2:",res.data.product);
-
+            console.log("企业isMore:",res.data.company.isMore);
+            
             companyId = res.data.company.id;
 
+            if(res.data.isMore == 1){
+              that.setData({
+                genduo_cp: true,
+              })
+            }
+
+            var wzgs = res.data.company.companyProfile;
+            console.log("企业companyProfile:",wzgs.length);
+            if(wzgs.length >= 100){
+              that.setData({
+                genduo_wz:true
+              })
+            }
+
+            
+            var  tag_type_b = [];
+            var yourString=res.data.company.type;
+            var result=yourString.split(",");
+            for(var i=0;i<result.length;i++){
+              tag_type_b.push(result[i]);
+            }
+            console.log(tag_type_b)
             that.setData({
-              
               product_list:res.data.product,
               picture:res.data.company.picture,
               companyName:res.data.company.companyName,
@@ -115,7 +139,7 @@ Page({
               companyProfile:res.data.company.companyProfile,
               jiazai_cp: false,
               isAddV:res.data.company.isAddV,
-              tag_type:res.data.company.type,
+              tag_type:tag_type_b,
             });
             
             var datas = res.data.product;
@@ -127,10 +151,61 @@ Page({
               })
             };
 
+         
+
+         
+            
+            
+
+            
+          }else{
+            wx.showToast({
+              icon: 'loading',
+              title: res.data.msg,
+            });
+          }
+  
+        },
+        fail:function(res){
+            wx.showToast({
+                icon: 'loading',
+                title: "服务器忙请稍后",
+              });
+             
+        }
+      });
+
+
+
+
+
+
+
+      wx.request({
+
+        url: findProductByCompanyIdForWX,
+        // tag_id = e,
+        data: {
+          companyId: options.qyId,
+        },
+ 
+        success:function(res){
+
+          if(res.data.state == 0){
+
+            var datas = res.data.product;
+            
+            console.log("pltag:",datas)
+
             datasbt = ["点评公司或产品","点评公司"];
+
             for(var i=0; i<datas.length; i++){
+
+              if(datas[i].productName != "-1"){
                datasbt.push(datas[i].productName);
                datasbt_id.push(datas[i].id);
+              }
+              
             }
 
             // productId=datasbt[0];
@@ -234,10 +309,15 @@ Page({
       })
     };
 },
-  cppostClick: function() {
+  cppostClick: function(e) {
     wx.navigateTo({
-      url: '../cppost/cppost'
+      url: '../cppost/cppost?qyId='+ companyId //传参跳转即可
     })
+  },
+  wzpostClick: function(e) {
+   this.setData({
+    genduo_wz:false
+   })
   },
   chooseicon:function(e){
     

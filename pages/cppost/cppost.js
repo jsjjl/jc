@@ -1,40 +1,49 @@
 //index.js
 //获取应用实例
-const app = getApp()
+
+const app = getApp();
+const findProductByCompanyIdForWX = require('../../config').findProductByCompanyIdForWX;
 
 Page({
   data:{
-    selected:true,
-    selected1:false,
-    accounts: ["点评这家公司", "QQ", "Email"],
-    accountIndex: 0,
-    accounts1: ["不锈钢管道", "QQ", "Email"],
-    accountIndex1: 0,
-    },
-  selected:function(e){
-    this.setData({
-      selected1:false,
-      selected:true
-    })
+    product_list:[]
   },
-  bindAccountChange: function(e) {
-      console.log('picker account 发生选择改变，携带值为', e.detail.value);
+  onLoad: function (options) {
+    var that = this;
+  
+    wx.request({
+      url: findProductByCompanyIdForWX,
+      // tag_id = e,
+      data: {
+        companyId: options.qyId,
+      },
+      
+      success:function(res){
 
-      this.setData({
-          accountIndex: e.detail.value
-      })
-  },
-  bindAccountChange1: function(e) {
-    console.log('picker account 发生选择改变，携带值为', e.detail.value);
+        if(res.data.state == 0){
+         
 
-    this.setData({
-        accountIndex1: e.detail.value
-    })
-},
-  selected1:function(e){
-    this.setData({
-      selected:false,
-      selected1:true
-    })
+          that.setData({
+            product_list:res.data.product,
+          });
+          
+          
+        }else{
+          wx.showToast({
+            icon: 'loading',
+            title: res.data.msg,
+          });
+        }
+
+      },
+      fail:function(res){
+          wx.showToast({
+              icon: 'loading',
+              title: "服务器忙请稍后",
+            });
+           
+      }
+    });
+
   }
 })
