@@ -24,6 +24,17 @@ Page({
   },
   onShow: function (options) {
     var that = this;
+    tag_id = 1;
+    this.setData({
+      tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1a.png',
+      tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+      tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+      tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+      tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    });
+    this.qy_list(1);
+
+
     wx.request({
       url: findCommentList,
       // tag_id = e,
@@ -66,9 +77,9 @@ Page({
     });
   },
   onLoad: function (options) {
-    var that = this;
+    // var that = this;
 
-    this.qy_list(1);
+    // this.qy_list(1);
 
     
 

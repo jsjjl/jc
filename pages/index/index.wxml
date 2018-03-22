@@ -15,7 +15,6 @@
 
   <scroll-view scroll-x="true" class="index_top_box">  
     <view class="uploadWrap" scroll-x="true">
-
       
       <!-- <block wx:for="{{list}}" wx:key="key">
         <view class="index_top" bindtap="tagClick_box" index="{{index}}" data-id="{{item.id}}" >  

@@ -147,7 +147,12 @@ if(companyLinkman =="" || phone == ""){
 }else{
   
   var myreg=/^[1][1,3,4,5,6,7,8,9][0-9]{9}$/;  
-  if (!myreg.test(phone)) {  
+  if (!myreg.test(phone)) {
+    wx.showModal({
+      title: '提示',
+      content: '手机号格式错误',
+      showCancel: false
+    });  
       return;  
   } 
 }

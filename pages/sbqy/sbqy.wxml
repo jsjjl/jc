@@ -10,7 +10,7 @@
 
                   <view class="box">
                     <view class="qt">联系电话：</view>
-                    <input class="fr" value="{{dh_inputVal}}"  bindinput="dh_bt"/>
+                    <input type="number" class="fr" maxlength="11" value="{{dh_inputVal}}"  bindinput="dh_bt"/>
                   </view>
 
                   <view class="box">
