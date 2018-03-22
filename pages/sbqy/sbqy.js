@@ -3,9 +3,9 @@ const declareCompany = require('../../config').declareCompany;
 const UploadVideo = require('../../config').UploadVideo;
 
 
-var companyLinkman//企业联系人
+var companyLinkman=""//企业联系人
 	
-		,phone//联系方式
+		,phone=""//联系方式
 	
 		,companyName//企业名称
 	
@@ -136,8 +136,24 @@ Page({
 
 
   saveClick: function() {
+
+if(companyLinkman =="" || phone == ""){
+  wx.showModal({
+    title: '提示',
+    content: '企业联系人、联系电话为必填项',
+    showCancel: false
+  });
+  return
+}else{
+  
+  var myreg=/^[1][1,3,4,5,6,7,8,9][0-9]{9}$/;  
+  if (!myreg.test(phone)) {  
+      return;  
+  } 
+}
+
     var that = this;
-console.log(fileUrl)
+    console.log(fileUrl)
     wx.request({
       url: declareCompany,
       // tag_id = e,
