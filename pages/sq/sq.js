@@ -109,7 +109,7 @@ console.log(loginByWX+'?uid='+uid+'&wxName='+wxName+'&gender='+gender+'&icon='+i
       var lsid =  res.data.data.id;
       console.log("1id:",lsid);
 
-        if(res.data.state == 200){
+        if(res.data.state == 0){
           wx.redirectTo({
             url:'../myedit/myedit?myid=' + lsid//传参跳转
           })
@@ -140,6 +140,9 @@ console.log(loginByWX+'?uid='+uid+'&wxName='+wxName+'&gender='+gender+'&icon='+i
 
 
   },
+
+
+  
   juClick: function(e){
     wx.navigateTo({
       url:"../index/index"

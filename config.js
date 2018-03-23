@@ -35,6 +35,8 @@ var config = {
   updateWXUser : `${host}/updateWXUser`,
   //所有产品
   findProductByCompanyIdForWX : `${host}/findProductByCompanyIdForWX`,
+  //评论次数
+  searchNum : `${host}/searchNum`,
   
   
 

@@ -69,7 +69,7 @@ Page({
                 var adata=JSON.parse(res.data);
                 console.log("返回的数据2",adata.state);
 
-                if (res.statusCode != 200 || adata.state != 200) { 
+                if (res.statusCode != 200 || adata.state != 0) { 
                             wx.showModal({
                               title: '提示',
                               content: '上传失败',

@@ -110,7 +110,26 @@
 
 <view class="pl_tt">
   <input class="weui-textarea" placeholder="请输入" bindinput="bindTextAreaBlur" />
-  <button class="weui-btn" type="default" disabled="{{tjxs}}" plain="true" bindtap="tjpl">提交</button>
+
+
+     <block wx:if="{{!hasUserInfo && canIUse}}">
+
+
+            <button class="weui-btn" type="default" disabled="{{tjxs}}" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">提交</button>
+
+   
+
+
+    </block>
+   
+    
+    <block wx:else>
+        <button class="weui-btn" type="default" disabled="{{tjxs}}" plain="true" bindtap="tjpl">提交</button>
+    </block>
+
+
+
+  
 </view>
 </view>
 
@@ -154,7 +173,7 @@
 
 <view class="wxapp-modal" style="{{modal_style}}">
      <view class="content">
-    <view class="header">确认提交评论？</view>
+    <view class="header">{{pj_text}}</view>
     <view class="body">
         <!-- <input placeholder="输入姓名" bindinput="bindKeyInput_xm"/>
         <input placeholder="输入手机号" maxlength="11" type="number" bindinput="bindKeyInput_sjh"/> -->

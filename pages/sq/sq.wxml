@@ -2,7 +2,7 @@
 <view class="index">
 <image class="topbj" mode="widthFix" src="../img/sq.png"></image>
 <p class="ts"><image  mode="widthFix" src="../img/q.png"></image>
-我们需要您的授权，以关联您的建信账号</p>
+我们需要您的授权，以关联"建材评价"服务</p>
 
   <view class="userinfo">
 

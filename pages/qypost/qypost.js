@@ -5,6 +5,7 @@ const findCompanyById = require('../../config').findCompanyById;
 const findCommentList = require('../../config').findCommentList;
 const insertComment = require('../../config').insertComment;
 const findProductByCompanyIdForWX = require('../../config').findProductByCompanyIdForWX;
+const searchNum = require('../../config').searchNum;
 var util = require('../../utils/util.js');  
 
 
@@ -17,9 +18,11 @@ nickName,
 companyId,
 productId = "",
 score = 5,
-addTime;
+addTime,
+pj_num = 0,
+gender;
 
-var datasbt = ["点评公司或产品","点评公司"];
+var datasbt = ["请选择评论对象","点评公司"];
 var datasbt_id = ["","0"];
 
 Page({
@@ -30,6 +33,7 @@ Page({
     wu_pl:false,
     genduo_cp: false,
     genduo_wz: false,
+    pj_text:"每位用户每天可以添加10条评论，确认提交评论吗？",
     isAddV: 0,
     accounts: ["点评这家公司"],
     accountIndex: 0,
@@ -57,8 +61,6 @@ Page({
       this.chooseicon_a(5);
 
 
-      //调用应用实例的方法获取全局数据  
-      that.getUserInfo();
       if (app.globalData.userInfo) {
         this.setData({
           userInfo: app.globalData.userInfo,
@@ -84,6 +86,10 @@ Page({
             })
           }
         })
+      }
+  
+      if(that.data.hasUserInfo == true){
+        that.getUserInfo();
       }
 
 
@@ -197,7 +203,7 @@ Page({
             
             console.log("pltag:",datas)
 
-            datasbt = ["点评公司或产品","点评公司"];
+            datasbt = ["请选择评论对象","点评公司"];
 
             for(var i=0; i<datas.length; i++){
 
@@ -358,16 +364,45 @@ Page({
         })
       }
     },
+
     
-    //提交评论
+    //显示提交评论提示框
     tjpl: function(e) {
-    
-   this.setData({
-    modal_style:"display:block",
-   })
-    
-     
-      },
+      var that = this;
+console.log("判断是否获取用户信息：",icon)
+      if(icon == null){
+        that.getUserInfo();
+
+        // wx.showModal({
+        //   title: '提示',
+        //   content: '请先使用微信登录；现在是否登录？',
+        //   showCancel: true,
+        //   cancelText: '否',
+        //   confirmText: '是',
+        //   success: function(res) {    if (res.confirm) {
+        //     console.log('用户点击确定');
+        //     wx.navigateTo({
+        //       url: '../sq/sq?id=0'
+        //     })
+        //   }}
+        // });
+        return;
+      }
+
+      console.log(pj_num);
+        var that = this;
+          if(pj_num < 10){
+            that.setData({
+              modal_style:"display:block"
+            })
+        }else{
+          wx.showModal({
+            title: '提示',
+            content: '已达今日评论数上限！',
+            showCancel: false
+          });
+        }
+    },
       bindKeyInput_sjh: function(e) {
 
         phone= e.detail.value;
@@ -392,13 +427,16 @@ Page({
       },
 //最终提交评论
 tjpl_ok: function(e) {
-  // wx.setStorageSync('storage_xm', this.data.storage_xm);
-  // wx.setStorageSync('storage_sjh', this.data.storage_sjh);
   var that = this;
-  // var time = util.formatTime(new Date());
-  // console.log(time)  
+  console.log("uid：",uid);
+  console.log("昵称：",wxName);
+  console.log("头像：",icon);
+  console.log(insertComment+"?uid="+uid+"&content="+content+"&phone="+phone+"&nickName="+nickName+"&companyId="+companyId+"&productId="+productId+"&score="+score+"&icon="+icon+"&wxName="+wxName);
+  
+  
   wx.request({
     url: insertComment,
+    
     // tag_id = e,
     data: {
       uid: uid,
@@ -461,6 +499,114 @@ tjpl_ok: function(e) {
           }
         });
 
+    //查询次数
+    wx.request({
+      url: searchNum,
+      data: {
+        icon: icon,
+      },
+      success:function(res){
+        if(res.data.state == 0){
+          pj_num = res.data.num;
+          console.log("cs:",pj_num)
+        }else{
+          console.log(res.data.msg);
+        }
+      },
+      fail:function(res){
+          wx.showToast({
+              icon: 'loading',
+              title: "服务器忙请稍后",
+            });
+      }
+    });
+
+        
+      wx.request({
+
+        url: findCompanyById,
+        // tag_id = e,
+        data: {
+          companyId: companyId,
+        },
+        
+        success:function(res){
+
+          if(res.data.state == 0){
+            console.log("企业:",res.data.company);
+            console.log("企业isMore:",res.data.company.isMore);
+            
+            companyId = res.data.company.id;
+
+            if(res.data.isMore == 1){
+              that.setData({
+                genduo_cp: true,
+              })
+            }
+
+            var wzgs = res.data.company.companyProfile;
+            console.log("企业companyProfile:",wzgs.length);
+            if(wzgs.length >= 100){
+              that.setData({
+                genduo_wz:true
+              })
+            }
+
+            
+            var  tag_type_b = [];
+            var yourString=res.data.company.type;
+            var result=yourString.split(",");
+            for(var i=0;i<result.length;i++){
+              tag_type_b.push(result[i]);
+            }
+            console.log(tag_type_b)
+            that.setData({
+              product_list:res.data.product,
+              picture:res.data.company.picture,
+              companyName:res.data.company.companyName,
+              score:res.data.company.score,
+              address:res.data.company.address,
+              phone:res.data.company.phone,
+              companyProfile:res.data.company.companyProfile,
+              jiazai_cp: false,
+              isAddV:res.data.company.isAddV,
+              tag_type:tag_type_b,
+            });
+            
+            var datas = res.data.product;
+            
+            if(res.data.product == undefined || res.data.product == ""){
+              that.setData({
+                wu_cp: true,
+                jiazai_cp: false,
+              })
+            };
+
+         
+
+         
+            
+            
+
+            
+          }else{
+            wx.showToast({
+              icon: 'loading',
+              title: res.data.msg,
+            });
+          }
+  
+        },
+        fail:function(res){
+            wx.showToast({
+                icon: 'loading',
+                title: "服务器忙请稍后",
+              });
+             
+        }
+      });
+
+
 
 
 
@@ -498,32 +644,73 @@ tjpl_ok: function(e) {
 
 
        //获取用户信息
-  getUserInfo:function(){ 
-    var that = this;  
+       getUserInfo:function(){ 
+        var that = this;  
+    
+        wx.login({
+          success: function(res) {
+            if (res.code) {
+                uid = res.code
+                console.log("获取的ID：",uid);
+                wx.getUserInfo({  
+                   success: function (res) {
 
-    wx.login({
-      success: function(res) {
-        if (res.code) {
-            // code = res.code
-            // console.log(code);
-            wx.getUserInfo({  
-               success: function (res) {
-                      wxName = res.userInfo.nickName;
-                      icon = res.userInfo.avatarUrl;
-                       console.log(wxName);
-                      console.log(icon);
+                    that.setData({
+                      userInfo: res.userInfo,
+                      hasUserInfo: true
+                    })
+
+                    wxName = res.userInfo.nickName;
+                    nickName = res.userInfo.nickName;
+                    icon = res.userInfo.avatarUrl;
+
+                        
+                          gender = res.userInfo.gender;
+                          console.log("getUserInfo获取的：",wxName,icon,gender);
 
 
-                 
+                           //查询次数
+                      wx.request({
+                        url: searchNum,
+                        data: {
+                          icon: icon,
+                        },
+                        success:function(res){
+                          if(res.data.state == 0){
+                            pj_num = res.data.num;
+                            console.log("cs:",pj_num)
+                          }else{
+                            console.log(res.data.msg);
+                          }
+                        },
+                        fail:function(res){
+                            wx.showToast({
+                                icon: 'loading',
+                                title: "服务器忙请稍后",
+                              });
+                        }
+                      });
 
-                    }  
-               });
-        } else {
-          console.log('获取用户登录态失败！' + res.errMsg)
-        }
-      }
-    });
 
-  },
+                        }  
+                   });
+            } else {
+
+              wx.showModal({
+                title: '提示',
+                content: '获取用户登录态失败！' + res.errMsg,
+                showCancel: false
+              })
+              
+            }
+          }
+        });
+    
+      },
+
+
+
+
+  
 
 })
