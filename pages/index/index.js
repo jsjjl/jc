@@ -114,6 +114,9 @@ Page({
       })
     }
 
+
+
+
     if(that.data.hasUserInfo == true){
       that.getUserInfo();
     }

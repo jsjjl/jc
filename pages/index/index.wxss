@@ -57,3 +57,7 @@
 .sq{ width: 90px; height: 90px; position: fixed; right:20px; bottom: 20px; z-index: 99; }
 
 .qy .weui-loadmore{ margin-left:-15rpx;}
+.sqbt { background:url(https://www.mlito.com/i_sbbj.png); background-color: none; background-size: 100%;}
+button[type=primary] {
+  background-color:rgba(0,0,0,0);
+}

@@ -161,18 +161,16 @@
 
 
 
-        <button class="sq" style="background:url(../img/i_sbbj.png);background-size:100%;" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        <button class="sq sqbt"  type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
 
-
-    </block>
-   
+ 
     
+    </block>
     <block wx:else>
-    <image class="sq" src="../img/i_sbbj.png"  mode="widthFix"  bindtap="sbClick" />
-      
 
-      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+
+    <image class="sq" src="../img/i_sbbj.png"  mode="widthFix"  bindtap="sbClick" />
+
     </block>
 
 </view>
