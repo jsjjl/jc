@@ -457,7 +457,10 @@ tjpl_ok: function(e) {
 
         that.setData({
           modal_style:"display:none",
+          pltext:"",
+          tjxs:true
          });
+         content == "";
 
         wx.showToast({
           icon: 'success',

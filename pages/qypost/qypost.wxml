@@ -109,7 +109,7 @@
     <em>{{dpfs}}分</em></view>
 
 <view class="pl_tt">
-  <input class="weui-textarea" placeholder="请输入" bindinput="bindTextAreaBlur" />
+  <input class="weui-textarea" placeholder="请输入" bindinput="bindTextAreaBlur" value="{{pltext}}" />
 
 
      <block wx:if="{{!hasUserInfo && canIUse}}">

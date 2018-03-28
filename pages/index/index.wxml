@@ -75,7 +75,7 @@
             </block>
 
           </view>
-          <text class="qy_mc ell">{{item.companyName}}</text>
+          <text class="qy_mc">{{item.companyName}}</text>
           <text class="qy_pf">评分：{{item.score}}分</text>
         </view>
       </block>
