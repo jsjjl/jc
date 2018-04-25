@@ -66,3 +66,4 @@
 button[type=primary] {
   background-color:rgba(0,0,0,0);
 }
+.weui-cell__ft { font-size: 13px;}

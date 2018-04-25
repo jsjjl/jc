@@ -2,7 +2,7 @@
   
 <view class="body">
  <view class="nav bc_white">
-  <view class="nav_top2 {{selected?'red':''}}" bindtap="selected">推荐企业</view>
+  <view class="nav_top2 {{selected?'red':''}}" bindtap="selected">上海化建TOP10</view>
   <view class="nav_top {{selected1?'red':''}}" bindtap="selected1">所有企业</view>
   <image class=" i_search" mode="widthFix" src="../img/i_search.png" bindtap="searchClick"></image>
  </view>
@@ -29,6 +29,10 @@
       <view class="index_top" bindtap="tagClick_box5">  
         <image class="index_top_img" src="{{tagClick_img5}}" mode="widthFix"></image>
         <span class="index_top_text">地坪</span>
+      </view>
+      <view class="index_top" bindtap="tagClick_box6">  
+        <image class="index_top_img" src="{{tagClick_img6}}" mode="widthFix"></image>
+        <span class="index_top_text">校园跑道</span>
       </view>
 
     </view>  

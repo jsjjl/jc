@@ -33,7 +33,7 @@ Page({
     wu_pl:false,
     genduo_cp: false,
     genduo_wz: false,
-    pj_text:"每位用户每天可以添加10条评论，确认提交评论吗？",
+    pj_text:"每位用户每天可以添加2条评论，确认提交评论吗？",
     isAddV: 0,
     accounts: ["点评这家公司"],
     accountIndex: 0,
@@ -391,7 +391,7 @@ console.log("判断是否获取用户信息：",icon)
 
       console.log(pj_num);
         var that = this;
-          if(pj_num < 10){
+          if(pj_num < 3){
             that.setData({
               modal_style:"display:block"
             })

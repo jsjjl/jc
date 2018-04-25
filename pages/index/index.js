@@ -24,6 +24,7 @@ Page({
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
     gs_list:[],
     pl_list:[],
     userInfo: {},
@@ -39,6 +40,7 @@ Page({
       tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
       tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
       tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+      tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
     });
     this.qy_list(1);
 
@@ -131,6 +133,7 @@ tagClick_box1: function(){
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
   });
   this.qy_list(1);
 },
@@ -142,6 +145,7 @@ tagClick_box2: function(){
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
   });
   this.qy_list(2);
 },
@@ -153,6 +157,7 @@ tagClick_box3: function(){
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3a.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
   });
   this.qy_list(3);
 },
@@ -164,6 +169,7 @@ tagClick_box4: function(){
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4a.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
   });
   this.qy_list(4);
 },
@@ -175,8 +181,21 @@ tagClick_box5: function(){
     tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
     tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
     tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5a.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6.png',
   });
   this.qy_list(5);
+},
+tagClick_box6: function(){
+  tag_id = 6;
+  this.setData({
+    tagClick_img1:'https://jiancaifile.dcofcity.com/icon/1.png',
+    tagClick_img2:'https://jiancaifile.dcofcity.com/icon/2.png',
+    tagClick_img3:'https://jiancaifile.dcofcity.com/icon/3.png',
+    tagClick_img4:'https://jiancaifile.dcofcity.com/icon/4.png',
+    tagClick_img5:'https://jiancaifile.dcofcity.com/icon/5.png',
+    tagClick_img6:'https://jiancaifile.dcofcity.com/icon/6a.png',
+  });
+  this.qy_list(6);
 },
   //事件处理函数
   bindViewTap: function() {
